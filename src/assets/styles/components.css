@@ -22,7 +22,7 @@
   }
 
   .hero {
-    @apply relative w-full h-dvh bg-cover bg-center bg-no-repeat max-w-[1440px] mx-auto text-white;
+    @apply relative w-full h-dvh bg-cover bg-center bg-no-repeat text-white;
     background-image: url("/images/Hero.png");
   }
 

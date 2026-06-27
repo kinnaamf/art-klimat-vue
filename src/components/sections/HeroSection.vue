@@ -1,5 +1,5 @@
 <template>
-  <section class="hero">
+  <div class="hero">
     <div class="hero-content">
       <div class="hero-text">
         <h1 class="h1 !text-white">
@@ -14,7 +14,7 @@
         <BaseButton variant="secondary" size="lg">Наши услуги</BaseButton>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <style scoped>
