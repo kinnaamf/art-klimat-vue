@@ -17,8 +17,12 @@ import PartnershipSection from "@/components/sections/PartnershipSection.vue";
   <header>
     <AppHeader/>
   </header>
-  <main>
-    <HeroSection/>
+
+  <div class="bg-[#3E4041]">
+    <HeroSection />
+  </div>
+
+  <main class="max-w-[1440px] mx-auto">
     <FeatureSection/>
     <ServicesSection/>
     <AdditionalInfo/>
@@ -28,6 +32,7 @@ import PartnershipSection from "@/components/sections/PartnershipSection.vue";
     <AboutSection/>
     <ContactSection/>
   </main>
+
   <footer>
     <AppFooter/>
   </footer>
