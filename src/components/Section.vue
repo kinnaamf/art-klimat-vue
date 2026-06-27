@@ -4,6 +4,7 @@ import { computed } from "vue";
 const props = defineProps<{
   background?: string;
   spacing?: string;
+  fullWidth?: boolean;
 }>()
 
 const spacingClass = computed(() => {
@@ -22,7 +23,7 @@ const spacingClass = computed(() => {
   <section :style="{ backgroundColor: `${background}` }"
            :class="spacingClass"
   >
-    <div class="container">
+    <div :class="fullWidth ? '' : 'container'">
       <slot/>
     </div>
   </section>

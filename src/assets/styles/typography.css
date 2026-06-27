@@ -30,7 +30,7 @@
   }
 
   .text-2 {
-    @apply text-sm font-normal leading-[20px];
+    @apply text-sm font-normal leading-[20px] text-darkgray/60;
   }
 
   .text-1-bold {

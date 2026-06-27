@@ -17,7 +17,7 @@ import Section from "@/components/Section.vue";
 
 const sections = [
   { component: HeroSection, background: '#3e4041', spacing: 'hero' },
-  { component: FeatureSection, spacing: 'md' },
+  { component: FeatureSection, spacing: 'md', fullWidth: true },
   { component: ServicesSection, spacing: 'md' },
   { component: AdditionalInfo, spacing: 'custom' },
   { component: PartnershipSection, spacing: 'md' },
@@ -37,6 +37,7 @@ const sections = [
            :key="idx"
            :background="section.background || '#f4f1ef'"
            :spacing="section.spacing"
+           :fullWidth="section.fullWidth"
   >
     <component :is="section.component"/>
   </Section>
