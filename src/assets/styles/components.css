@@ -141,4 +141,23 @@
   .app-form-textarea {
     @apply px-[22px] py-[18px] rounded-2xl bg-white/10 w-full
   }
+
+  /* PARTNERSHIP SECTION STYLES */
+
+  .partnership-container {
+    @apply flex border-t border-t-darkgray/10 pt-20 px-16;
+  }
+
+  .circle {
+    @apply w-2.5 h-2.5 flex items-center justify-center bg-orange rounded-full border border-orange;
+    box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.60) inset;
+  }
+
+  .partnership-stats-container {
+    @apply flex justify-between gap-16;
+  }
+
+  .partnership-stat-item {
+    @apply flex flex-col gap-4;
+  }
 }

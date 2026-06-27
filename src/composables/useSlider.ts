@@ -13,28 +13,35 @@ export interface Feature {
   icon: any
 }
 
-import { ref } from "vue";
+import { computed, ref } from "vue";
 
 export const useSlider = () => {
-  const featureData = ref<Feature[]>([
-    {
-      title: 'Полный цикл работ',
-      description: 'По инженерным системам: от проектирования до запуска и сервисного обслуживания',
-      icon: IconCycle
-    },
+
+  // FEATURE SECTION
+
+  const featureData: Feature[] = [
+      {
+        title: 'Полный цикл работ',
+        description: 'По инженерным системам: от проектирования до запуска и сервисного обслуживания',
+        icon: IconCycle
+      },
     {
       title: 'Более 15 лет опыта',
       description: 'В сфере вентиляции, кондиционирования и инженерных систем. Компания работает с 2007 года',
       icon: IconExperience
     },
     {
-      title: 'Более 3600 м²',
-      description: 'Собственных складов и производственных площадей. Наличие продукции и материалов позволяет минимизировать сроки поставки',
+      title:
+      'Более 3600 м²',
+      description:
+      'Собственных складов и производственных площадей. Наличие продукции и материалов позволяет минимизировать сроки поставки',
       icon: IconWarehouse
     },
     {
-      title: 'Современное оборудование',
-      description: 'Применение актуальных инженерных решений. Использование передовых технологий в производстве и монтаже',
+      title:
+      'Современное оборудование',
+      description:
+      'Применение актуальных инженерных решений. Использование передовых технологий в производстве и монтаже',
       icon: IconEquipment
     },
     {
@@ -43,11 +50,13 @@ export const useSlider = () => {
       icon: IconFlexibility,
     },
     {
-      title: 'Проекты любой сложности',
-      description: 'Жилые комплексы, производственные предприятия, офисные здания, гостиницы, склады и промышленные объекты',
+      title:
+      'Проекты любой сложности',
+      description:
+      'Жилые комплексы, производственные предприятия, офисные здания, гостиницы, склады и промышленные объекты',
       icon: IconComplexity
     },
-  ])
+    ]
 
   const featuresRef = ref<HTMLElement | null>(null)
 
@@ -78,11 +87,37 @@ export const useSlider = () => {
     isDown.value = false
   }
 
+  // PARTNERSHIP SECTION
+
+  const slides = [
+    { main: '/images/production-slider/slide-1.png', alt: 'Вентиляционная система в производственном помещении' },
+    { main: '/images/production-slider/slide-2.png', alt: 'Монтаж климатического оборудования' },
+    { main: '/images/production-slider/slide-3.png', alt: 'Промышленная вентиляция' },
+  ]
+
+  const current = ref(0)
+
+  const nextIndex = computed(() => (current.value + 1) % slides.length)
+
+  const next = () => {
+    current.value = nextIndex.value
+  }
+
+  const prev = () => {
+    current.value = (current.value - 1 + slides.length) % slides.length
+  }
+
   return {
     featuresRef,
     startDragging,
     drag,
     stopDragging,
     featureData,
+
+    slides,
+    current,
+    nextIndex,
+    next,
+    prev,
   }
 }

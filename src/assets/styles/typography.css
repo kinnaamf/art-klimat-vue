@@ -37,4 +37,8 @@
     @apply text-base font-medium leading-6 text-white;
     text-shadow: 0 2px 4px rgba(255, 255, 255, 0.10);
   }
+
+  .stat-item-title {
+    @apply text-[80px] font-medium leading-[88px] text-orange;
+  }
 }
