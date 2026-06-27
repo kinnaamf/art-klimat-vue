@@ -4,7 +4,7 @@ import AppHeader from "@/components/layout/AppHeader.vue";
 import AppFooter from "@/components/layout/AppFooter.vue";
 
 import HeroSection from "@/components/sections/HeroSection.vue";
-import ServicesSection from "@/components/sections/ServicesSection.vue";
+import ServiceSection from "@/components/sections/ServiceSection.vue";
 import ContactSection from "@/components/sections/ContactSection.vue";
 import AboutSection from "@/components/sections/AboutSection.vue";
 import ProjectsSection from "@/components/sections/ProjectsSection.vue";
@@ -18,7 +18,7 @@ import Section from "@/components/Section.vue";
 const sections = [
   { component: HeroSection, background: '#3e4041', spacing: 'hero' },
   { component: FeatureSection, spacing: 'md', fullWidth: true },
-  { component: ServicesSection, spacing: 'md' },
+  { component: ServiceSection, spacing: 'md' },
   { component: AdditionalInfo, spacing: 'custom' },
   { component: PartnershipSection, spacing: 'md' },
   { component: ProductsSection, background: '#ffffff', spacing: 'product' },

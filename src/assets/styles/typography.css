@@ -22,7 +22,7 @@
   }
 
   .text-big {
-    @apply text-2xl font-normal leading-7 -tracking-wide text-darkgray/60;
+    @apply text-xl font-normal leading-7 -tracking-wide text-darkgray/60;
   }
 
   .text-1 {
