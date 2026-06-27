@@ -16,15 +16,15 @@ import PartnershipSection from "@/components/sections/PartnershipSection.vue";
 import Section from "@/components/Section.vue";
 
 const sections = [
-  { component: HeroSection, background: '#3e4041' },
-  { component: FeatureSection },
-  { component: ServicesSection },
-  { component: AdditionalInfo },
-  { component: PartnershipSection },
-  { component: ProductsSection, background: '#ffffff' },
-  { component: ProjectsSection, background: '#ffffff' },
-  { component: AboutSection },
-  { component: ContactSection },
+  { component: HeroSection, background: '#3e4041', spacing: 'hero' },
+  { component: FeatureSection, spacing: 'md' },
+  { component: ServicesSection, spacing: 'md' },
+  { component: AdditionalInfo, spacing: 'custom' },
+  { component: PartnershipSection, spacing: 'md' },
+  { component: ProductsSection, background: '#ffffff', spacing: 'product' },
+  { component: ProjectsSection, background: '#ffffff', spacing: 'alt' },
+  { component: AboutSection, spacing: 'lg' },
+  { component: ContactSection, spacing: 'contact' },
 ]
 </script>
 
@@ -35,8 +35,10 @@ const sections = [
 
   <Section v-for="(section, idx) in sections"
            :key="idx"
-           :background="section.background">
-    <component :is="section.component" />
+           :background="section.background || '#f4f1ef'"
+           :spacing="section.spacing"
+  >
+    <component :is="section.component"/>
   </Section>
 
   <footer>

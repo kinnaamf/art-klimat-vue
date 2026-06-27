@@ -3,7 +3,9 @@
 </script>
 
 <template>
+<div class="">
 
+</div>
 </template>
 
 <style scoped lang="postcss">

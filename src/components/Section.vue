@@ -1,11 +1,27 @@
 <script setup lang="ts">
-defineProps<{
+import { computed } from "vue";
+
+const props = defineProps<{
   background?: string;
+  spacing?: string;
 }>()
+
+const spacingClass = computed(() => {
+  return {
+    hero: '',
+    md: 'py-24',
+    lg: 'py-[128px]',
+    alt: 'pt-24 pb-[8rem]',
+    product: 'pt-[8rem] pb-24',
+    contact: 'pt-20 pb-[8rem]',
+  }[props.spacing || 'md']
+})
 </script>
 
 <template>
-  <section :style="{ backgroundColor: `${background}` }">
+  <section :style="{ backgroundColor: `${background}` }"
+           :class="spacingClass"
+  >
     <div class="container">
       <slot/>
     </div>
