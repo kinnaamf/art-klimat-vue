@@ -87,7 +87,7 @@ export const useSlider = () => {
     isDown.value = false
   }
 
-  // PARTNERSHIP SECTION
+  // PRODUCTION SECTION
 
   const slides = [
     { main: '/images/production-slider/slide-1.png', alt: 'Вентиляционная система в производственном помещении' },

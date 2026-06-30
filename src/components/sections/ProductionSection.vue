@@ -1,13 +1,13 @@
 <script setup lang="ts">
 
-import PartnershipSlider from "@/components/sections/PartnershipSlider.vue";
+import ProductionSlider from "@/components/sections/ProductionSlider.vue";
 import { useSlider } from "@/composables/useSlider.ts";
 
 const { slides } = useSlider()
 </script>
 
 <template>
-  <div class="partnership-container">
+  <div class="production-container">
     <div class="flex items-center gap-2.5 h-7 w-[430px] shrink-0">
       <div class="circle"></div>
       <span class="text-big text-darkgray/50">О компании</span>
@@ -19,8 +19,8 @@ const { slides } = useSlider()
         и надёжностью. Вы можете выбрать<br>из различных <span class="text-darkgray/40">моделей и размеров, подходящих для любых помещений и условий
         эксплуатации</span>
       </h2>
-      <div class="partnership-stats-container">
-        <div class="partnership-stat-item">
+      <div class="production-stats-container">
+        <div class="production-stat-item">
           <h3 class="stat-item-title">
             850 000 м²
           </h3>
@@ -28,7 +28,7 @@ const { slides } = useSlider()
             Произвели воздуховодов
           </p>
         </div>
-        <div class="partnership-stat-item">
+        <div class="production-stat-item">
           <h3 class="stat-item-title">
             1 800 400
           </h3>
@@ -43,7 +43,7 @@ const { slides } = useSlider()
         помещений и условий эксплуатации
       </h4>
 
-      <PartnershipSlider :slides="slides"/>
+      <ProductionSlider :slides="slides"/>
     </div>
 
   </div>

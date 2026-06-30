@@ -142,9 +142,9 @@
     @apply px-[22px] py-[18px] rounded-2xl bg-white/10 w-full
   }
 
-  /* PARTNERSHIP SECTION STYLES */
+  /* PRODUCTION SECTION STYLES */
 
-  .partnership-container {
+  .production-container {
     @apply flex border-t border-t-darkgray/10 pt-20 px-16;
   }
 
@@ -153,11 +153,11 @@
     box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.60) inset;
   }
 
-  .partnership-stats-container {
+  .production-stats-container {
     @apply flex justify-between gap-16;
   }
 
-  .partnership-stat-item {
+  .production-stat-item {
     @apply flex flex-col gap-4;
   }
 }

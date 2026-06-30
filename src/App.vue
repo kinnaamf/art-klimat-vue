@@ -11,7 +11,7 @@ import ProjectsSection from "@/components/sections/ProjectsSection.vue";
 import ProductsSection from "@/components/sections/ProductsSection.vue";
 import AdditionalInfo from "@/components/sections/AdditionalInfo.vue";
 import FeatureSection from "@/components/sections/FeatureSection.vue";
-import PartnershipSection from "@/components/sections/PartnershipSection.vue";
+import ProductionSection from "@/components/sections/ProductionSection.vue";
 
 import Section from "@/components/Section.vue";
 
@@ -20,7 +20,7 @@ const sections = [
   { component: FeatureSection, spacing: 'md', fullWidth: true },
   { component: ServiceSection, spacing: 'md' },
   { component: AdditionalInfo, spacing: 'custom' },
-  { component: PartnershipSection, spacing: 'md' },
+  { component: ProductionSection, spacing: 'md' },
   { component: ProductsSection, background: '#ffffff', spacing: 'product' },
   { component: ProjectsSection, background: '#ffffff', spacing: 'alt' },
   { component: AboutSection, spacing: 'lg' },
