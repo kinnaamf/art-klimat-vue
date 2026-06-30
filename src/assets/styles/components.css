@@ -160,4 +160,19 @@
   .production-stat-item {
     @apply flex flex-col gap-4;
   }
+
+  /* PRODUCTS SECTION STYLES */
+
+  .products-list {
+    @apply grid grid-cols-5 gap-4
+  }
+
+  .product-item {
+    @apply h-[425px] w-[250px] flex flex-col gap-2;
+    flex: 1 0 0;
+  }
+
+  .product-text-container {
+    @apply flex flex-col gap-1;
+  }
 }
