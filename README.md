@@ -8,7 +8,9 @@ Built with **Vue.js 3.5**, **TypeScript**, and **Tailwind CSS**.
 ### Installation
 ```
 git clone [https://github.com/your-username/art-klimat.git](https://github.com/your-username/art-klimat.git)
+
 cd art-klimat
+
 npm install
 ```
 
