@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 import SectionTitle from "@/components/SectionTitle.vue";
-import FeatureList from "@/components/sections/FeatureList.vue";
+import FeatureList from "@/components/sections/feature/FeatureList.vue";
 import { useSlider } from "@/composables/useSlider.ts";
 
 const { featureData } = useSlider();

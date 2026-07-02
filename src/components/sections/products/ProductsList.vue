@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Product } from "@/composables/useProducts.ts";
-import ProductItem from "@/components/sections/ProductItem.vue";
+import ProductItem from "@/components/sections/products/ProductItem.vue";
 
 defineProps<{
   products: Product[];

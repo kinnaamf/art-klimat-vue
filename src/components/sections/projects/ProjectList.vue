@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Project } from "@/composables/useProjects.ts";
-import ProjectItem from "@/components/sections/ProjectItem.vue";
+import ProjectItem from "@/components/sections/projects/ProjectItem.vue";
 
 defineProps<{
   projects: Project[]

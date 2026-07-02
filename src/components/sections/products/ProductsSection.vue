@@ -2,7 +2,7 @@
 
 import SectionTitle from "@/components/SectionTitle.vue";
 import SectionDescription from "@/components/SectionDescription.vue";
-import ProductsList from "@/components/sections/ProductsList.vue";
+import ProductsList from "@/components/sections/products/ProductsList.vue";
 import { useProducts } from "@/composables/useProducts.ts";
 import BaseButton from "@/components/ui/BaseButton.vue";
 

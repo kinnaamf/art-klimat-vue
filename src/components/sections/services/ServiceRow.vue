@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import ServiceCard from "@/components/sections/ServiceCard.vue";
+import ServiceCard from "@/components/sections/services/ServiceCard.vue";
 
 defineProps<{
   cards: { title: string; type: string }[];

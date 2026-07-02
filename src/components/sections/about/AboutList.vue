@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Stat } from "@/composables/useStats.ts";
-import AboutItem from "@/components/sections/AboutItem.vue";
+import AboutItem from "@/components/sections/about/AboutItem.vue";
 
 defineProps<{
   stats: Stat

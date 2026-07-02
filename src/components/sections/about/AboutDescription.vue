@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AboutList from "@/components/sections/AboutList.vue";
+import AboutList from "@/components/sections/about/AboutList.vue";
 import { useStats } from "@/composables/useStats.ts";
 
 const { stats } = useStats();

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import AboutDescription from "@/components/sections/AboutDescription.vue";
+import AboutDescription from "@/components/sections/about/AboutDescription.vue";
 </script>
 
 <template>

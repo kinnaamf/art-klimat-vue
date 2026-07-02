@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { type Feature, useSlider } from "@/composables/useSlider.ts";
-import FeatureItem from "@/components/sections/FeatureItem.vue";
+import FeatureItem from "@/components/sections/feature/FeatureItem.vue";
 
 defineProps<{
   featureData: Feature[]

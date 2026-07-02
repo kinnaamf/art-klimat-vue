@@ -1,10 +1,10 @@
 <script setup lang="ts">
 
 import SectionTitle from "@/components/SectionTitle.vue";
-import ServiceForm from "@/components/sections/ServiceForm.vue";
-import ServiceContacts from "@/components/sections/ServiceContacts.vue";
-import ServiceCard from "@/components/sections/ServiceCard.vue";
-import ServiceRow from "@/components/sections/ServiceRow.vue";
+import ServiceForm from "@/components/sections/services/ServiceForm.vue";
+import ServiceContacts from "@/components/sections/services/ServiceContacts.vue";
+import ServiceCard from "@/components/sections/services/ServiceCard.vue";
+import ServiceRow from "@/components/sections/services/ServiceRow.vue";
 
 const rowOne = [
   { title: 'Проектирование', type: 'planning' },

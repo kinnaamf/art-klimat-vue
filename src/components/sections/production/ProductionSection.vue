@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import ProductionSlider from "@/components/sections/ProductionSlider.vue";
+import ProductionSlider from "@/components/sections/production/ProductionSlider.vue";
 import { useSlider } from "@/composables/useSlider.ts";
 
 const { slides } = useSlider()

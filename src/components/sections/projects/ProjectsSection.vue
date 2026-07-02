@@ -2,7 +2,7 @@
 
 import SectionTitle from "@/components/SectionTitle.vue";
 import SectionDescription from "@/components/SectionDescription.vue";
-import ProjectList from "@/components/sections/ProjectList.vue";
+import ProjectList from "@/components/sections/projects/ProjectList.vue";
 import { useProjects } from "@/composables/useProjects.ts";
 import BaseButton from "@/components/ui/BaseButton.vue";
 
