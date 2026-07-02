@@ -4,7 +4,7 @@ import AppForm from "@/components/AppForm.vue";
 </script>
 
 <template>
-  <div class="flex">
+  <div class="flex justify-between gap-6 border-t border-t-darkgray/10 pt-20">
     <div class="space-y-6">
       <h2 class="h1">
         Оставьте заявку, чтобы обсудить проект
