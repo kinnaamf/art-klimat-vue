@@ -10,16 +10,17 @@ const { projects } = useProjects();
 </script>
 
 <template>
-  <div class="pt-20 border-t border-darkgray/10 space-y-12">
+  <div class=" px-16">
+    <div class="pt-20 border-t border-darkgray/10 space-y-12">
+      <div class="flex flex-col gap-4">
+        <SectionTitle>Реализованные <span class="text-orange">объекты</span></SectionTitle>
+        <SectionDescription>Мы предлагаем качественные и надежные вентиляционные изделия по доступным ценам</SectionDescription>
+      </div>
+      <ProjectList :projects="projects"/>
 
-    <div class="flex flex-col gap-4">
-      <SectionTitle>Реализованные <span class="text-orange">объекты</span></SectionTitle>
-      <SectionDescription>Мы предлагаем качественные и надежные вентиляционные изделия по доступным ценам</SectionDescription>
-    </div>
-    <ProjectList :projects="projects"/>
-
-    <div class="flex justify-center">
-      <BaseButton variant="primary" size="lg">Посмотреть всё</BaseButton>
+      <div class="flex justify-center">
+        <BaseButton variant="primary" size="lg">Посмотреть всё</BaseButton>
+      </div>
     </div>
   </div>
 </template>

@@ -10,18 +10,21 @@ const { products } = useProducts();
 </script>
 
 <template>
-<div class="space-y-12">
-  <div class="flex flex-col gap-4">
-    <SectionTitle>Наша <span class="text-orange">продукция</span></SectionTitle>
-    <SectionDescription>Мы предлагаем качественные и надежные вентиляционные изделия по доступным ценам</SectionDescription>
-  </div>
+  <div class="px-16">
+    <div class="space-y-12">
+      <div class="flex flex-col gap-4">
+        <SectionTitle>Наша <span class="text-orange">продукция</span></SectionTitle>
+        <SectionDescription>Мы предлагаем качественные и надежные вентиляционные изделия по доступным ценам
+        </SectionDescription>
+      </div>
 
-  <ProductsList :products="products" />
+      <ProductsList :products="products"/>
 
-  <div class="flex justify-center">
-    <BaseButton variant="primary" size="lg">Посмотреть ещё</BaseButton>
+      <div class="flex justify-center">
+        <BaseButton variant="primary" size="lg">Посмотреть ещё</BaseButton>
+      </div>
+    </div>
   </div>
-</div>
 </template>
 
 <style scoped lang="postcss">
