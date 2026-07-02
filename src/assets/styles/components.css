@@ -175,4 +175,24 @@
   .product-text-container {
     @apply flex flex-col gap-1;
   }
+
+  /* ABOUT SECTION STYLES */
+
+  .about-image-container {
+    @apply inline-grid gap-6 self-stretch;
+    grid-template-rows: repeat(1,fit-content(100%));
+    grid-template-columns: minmax(0,4.50fr) minmax(0,1fr)
+  }
+
+  .about-image {
+    @apply rounded-2xl w-full object-cover
+  }
+
+  .about-title {
+    @apply text-orange;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 88px;
+  }
 }
