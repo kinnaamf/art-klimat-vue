@@ -2,6 +2,54 @@
 
 @layer components {
 
+  .app-form-dark {
+    @apply bg-darkgray rounded-3xl text-white p-12
+  }
+
+  .app-form-light {
+    @apply bg-none text-darkgray
+  }
+
+  .app-form-input {
+    @apply px-[22px] py-[18px] rounded-2xl w-1/2
+  }
+
+  .app-form-input-dark {
+    @apply bg-white/10 text-white
+  }
+
+  .app-form-input-dark::placeholder {
+    @apply text-white/50
+  }
+
+  .app-form-input-light {
+    @apply bg-black/5 text-darkgray
+  }
+
+  .app-form-input-light::placeholder {
+    @apply  text-darkgray/50
+  }
+
+  .app-form-textarea {
+    @apply px-[22px] py-[18px] rounded-2xl w-full resize-none
+  }
+
+  .app-form-textarea-light {
+    @apply bg-black/5 text-darkgray
+  }
+
+  .app-form-textarea-dark {
+    @apply bg-white/10
+  }
+
+  .app-form-textarea-light::placeholder {
+    @apply  text-darkgray/50
+  }
+
+  .app-form-textarea-dark::placeholder {
+    @apply text-white/50
+  }
+
   /* BUTTON STYLES */
 
   .btn {
@@ -128,18 +176,6 @@
 
   .img-commissioning {
     @apply relative left-0 w-full object-contain pointer-events-none select-none rounded-3xl object-top;
-  }
-
-  .service-form {
-    @apply bg-darkgray rounded-3xl text-white p-12
-  }
-
-  .app-form-input {
-    @apply px-[22px] py-[18px] rounded-2xl bg-white/10 w-1/2
-  }
-
-  .app-form-textarea {
-    @apply px-[22px] py-[18px] rounded-2xl bg-white/10 w-full
   }
 
   /* PRODUCTION SECTION STYLES */
