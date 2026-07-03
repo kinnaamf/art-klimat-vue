@@ -457,7 +457,7 @@
   }
 
   .about__item-title {
-    @apply text-orange;
+    @apply text-orange/20 transition-all duration-[2s];
     font-size: 80px;
     font-style: normal;
     font-weight: 500;
