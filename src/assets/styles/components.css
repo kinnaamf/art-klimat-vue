@@ -298,21 +298,49 @@
 
   /* ABOUT SECTION STYLES */
 
-  .about-image-container {
+  .about__container {
+    @apply space-y-24 mx-auto px-16;
+  }
+
+  .about__gallery {
     @apply inline-grid gap-6 self-stretch;
     grid-template-rows: repeat(1,fit-content(100%));
     grid-template-columns: minmax(0,4.50fr) minmax(0,1fr)
   }
 
-  .about-image {
+  .about__image {
     @apply rounded-2xl w-full object-cover
   }
 
-  .about-title {
+  .about__image-primary {
+    @apply h-[600px] aspect-video;
+  }
+
+  .about__image-secondary {
+    @apply h-[235px] aspect-square;
+  }
+
+  .about__item-title {
     @apply text-orange;
     font-size: 80px;
     font-style: normal;
     font-weight: 500;
     line-height: 88px;
+  }
+
+  .about__description-container {
+    @apply max-w-[800px] mx-auto space-y-12;
+  }
+
+  .about__description-content {
+    @apply flex gap-16;
+  }
+
+  .about__description-column {
+    @apply flex flex-col gap-6;
+  }
+
+  .about__list {
+    @apply grid grid-cols-3 gap-12;
   }
 }

@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-<div class="grid grid-cols-3 gap-12">
+<div class="about__list">
   <div v-for="stat in stats">
     <AboutItem :stat="stat"/>
   </div>
