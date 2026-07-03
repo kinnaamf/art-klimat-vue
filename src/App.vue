@@ -31,7 +31,7 @@ const sections = [
 </script>
 
 <template>
-  <header>
+  <header class="app-header">
     <AppHeader/>
   </header>
 

@@ -2,6 +2,10 @@
 
 @layer components {
 
+  .app-header {
+    @apply fixed top-6 left-1/2 -translate-x-1/2 z-[100];
+  }
+
   .app-form-dark {
     @apply bg-darkgray rounded-3xl text-white p-12
   }

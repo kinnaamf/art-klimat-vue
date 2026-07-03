@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { computed, ref, onMounted } from "vue";
 import IconTelegram from "@/components/icons/IconTelegram.vue";
 import IconWhatsApp from "@/components/icons/IconWhatsApp.vue";
 import BaseButton from "@/components/ui/BaseButton.vue";
+import IconSearch from "@/components/icons/IconSearch.vue";
 
 const links = [
   {
@@ -49,48 +50,68 @@ const lightClass = computed(() => {
 })
 
 const darkClass = computed(() => {
-  return 'bg-darkgray/10'
+  return 'bg-darkgray/90'
+})
+
+const isPastHero = ref<boolean>(false);
+
+onMounted(() => {
+  const hero = document.querySelector('.hero');
+
+  if (!hero) return
+
+  const observer = new IntersectionObserver(
+      ([entry]) => {
+        isPastHero.value = !entry.isIntersecting
+      },
+      {threshold: 0, rootMargin: '-60px 0px 0px 0px'}
+  )
+  observer.observe(hero);
 })
 </script>
 
 <template>
-  <div class="fixed top-6 left-1/2 -translate-x-1/2 z-[100]">
-    <div class="flex justify-between items-center gap-[10px]">
-      <div
-          :class="lightClass"
-          class=" backdrop-blur-sm rounded-2xl py-1 pl-1 pr-6 flex items-center gap-6 text-1 !text-white/70">
-        <img src="/images/logo.png" alt="" class="w-12 h-12">
-        <nav>
-          <ul class="flex gap-6">
-            <li v-for="link in links"
-                :class="{ active: activeLink === link.id }"
-                @click.prevent="activeLink = link.id"
-            >
-              <a :href="`#${link.to}`">
-                {{ link.title }}
-              </a>
-            </li>
-          </ul>
-        </nav>
+  <div class="flex gap-[10px]">
+    <div
+        :class="isPastHero ? darkClass : lightClass"
+        class="flex items-center gap-6 py-1 pl-1 rounded-2xl shrink-0 transition-all duration-200">
+      <img src="/images/logo.png" alt="" class="w-12 h-12">
+      <nav class="mr-6">
+        <ul class="flex items-center gap-6">
+          <li
+              v-for="link in links"
+              :key="link.id"
+              @click.prevent="activeLink = link.id"
+              :class="{ 'active': activeLink === link.id }"
+              class="text-1 text-white/70 text-nowrap"
+          >
+            <a :href="`#${ link.to }`">{{ link.title }}</a>
+          </li>
+          <li class="text-1 text-white/70 flex items-center gap-2">
+            <IconSearch/>
+            Поиск
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div
+        class="flex items-center gap-1 p-1 rounded-2xl shrink-0 transition-all duration-200"
+        :class="isPastHero ? darkClass : lightClass">
+      <div class="flex items-center justify-center w-12 h-12 rounded-2xl transition-all duration-200"
+           :class="isPastHero ? darkClass : lightClass">
+        <IconTelegram/>
       </div>
-      <div :class="lightClass"
-          class="p-1 flex gap-1 items-center backdrop-blur-sm rounded-2xl">
-        <div :class="lightClass"
-            class="w-12 h-12 flex items-center justify-center rounded-2xl shrink-0">
-          <IconTelegram/>
-        </div>
-        <div :class="lightClass"
-            class="w-12 h-12 flex items-center justify-center rounded-2xl shrink-0">
-          <IconWhatsApp/>
-        </div>
-        <BaseButton variant="primary" size="md" class="text-nowrap">Оставить заявку</BaseButton>
+      <div class="flex items-center justify-center w-12 h-12 rounded-2xl transition-all duration-200"
+           :class="isPastHero ? darkClass : lightClass">
+        <IconWhatsApp/>
       </div>
+      <BaseButton variant="primary" size="md">Оставьте заявку</BaseButton>
     </div>
   </div>
 </template>
 
 <style scoped lang="postcss">
 .active {
-  color: white;
+  color: white !important;
 }
 </style>
