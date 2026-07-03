@@ -17,16 +17,16 @@ import Section from "@/components/Section.vue";
 import PartnershipSection from "@/components/sections/partnership/PartnershipSection.vue";
 
 const sections = [
-  { component: HeroSection, background: '#3e4041', spacing: 'hero' },
-  { component: FeatureSection, spacing: 'md', fullWidth: true },
-  { component: ServiceSection, spacing: 'md' },
-  { component: AdditionalInfo, spacing: 'custom' },
-  { component: ProductionSection, spacing: 'md' },
-  { component: PartnershipSection, spacing: 'md', fullWidth: true },
-  { component: ProductsSection, background: '#ffffff', spacing: 'product' },
-  { component: ProjectsSection, background: '#ffffff', spacing: 'alt' },
-  { component: AboutSection, spacing: 'lg' },
-  { component: ContactSection, spacing: 'contact' },
+  { component: HeroSection, background: '#3e4041', spacing: 'hero', id: 'hero' },
+  { component: FeatureSection, spacing: 'md', fullWidth: true, id: 'feature' },
+  { component: ServiceSection, spacing: 'md', id: 'service' },
+  { component: AdditionalInfo, spacing: 'custom', id: 'additional-info' },
+  { component: ProductionSection, spacing: 'md', id: 'production' },
+  { component: PartnershipSection, spacing: 'md', fullWidth: true, id: 'partnership' },
+  { component: ProductsSection, background: '#ffffff', spacing: 'product', id: 'products' },
+  { component: ProjectsSection, background: '#ffffff', spacing: 'alt', id:  'projects' },
+  { component: AboutSection, spacing: 'lg', id: 'about' },
+  { component: ContactSection, spacing: 'contact',  id: 'contact' },
 ]
 </script>
 
@@ -40,6 +40,7 @@ const sections = [
            :background="section.background || '#f4f1ef'"
            :spacing="section.spacing"
            :fullWidth="section.fullWidth"
+           :id="section.id"
   >
     <component :is="section.component"/>
   </Section>

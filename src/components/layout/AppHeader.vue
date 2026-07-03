@@ -4,70 +4,16 @@ import IconTelegram from "@/components/icons/IconTelegram.vue";
 import IconWhatsApp from "@/components/icons/IconWhatsApp.vue";
 import BaseButton from "@/components/ui/BaseButton.vue";
 import IconSearch from "@/components/icons/IconSearch.vue";
+import { useHeader } from "@/composables/useHeader.ts";
 
-const links = [
-  {
-    id: 1,
-    title: 'Главная',
-    to: '/'
-  },
-  {
-    id: 2,
-    title: 'Продукция',
-    to: '/'
-  },
-  {
-    id: 3,
-    title: 'Услуги',
-    to: '/'
-  },
-  {
-    id: 4,
-    title: 'Производство',
-    to: '/'
-  },
-  {
-    id: 5,
-    title: 'Объекты',
-    to: '/'
-  },
-  {
-    id: 6,
-    title: 'О компании',
-    to: '/'
-  },
-  {
-    id: 7,
-    title: 'Контакты',
-    to: '/'
-  },
-]
-
-const activeLink = ref(1)
-
-const lightClass = computed(() => {
-  return 'bg-white/10'
-})
-
-const darkClass = computed(() => {
-  return 'bg-darkgray/90'
-})
-
-const isPastHero = ref<boolean>(false);
-
-onMounted(() => {
-  const hero = document.querySelector('.hero');
-
-  if (!hero) return
-
-  const observer = new IntersectionObserver(
-      ([entry]) => {
-        isPastHero.value = !entry.isIntersecting
-      },
-      {threshold: 0, rootMargin: '-60px 0px 0px 0px'}
-  )
-  observer.observe(hero);
-})
+const {
+  links,
+  activeLink,
+  scrollTo,
+  lightClass,
+  darkClass,
+  isPastHero
+} = useHeader()
 </script>
 
 <template>
@@ -81,11 +27,11 @@ onMounted(() => {
           <li
               v-for="link in links"
               :key="link.id"
-              @click.prevent="activeLink = link.id"
+              @click.prevent="activeLink = link.id; scrollTo(link.to)"
               :class="{ 'active': activeLink === link.id }"
-              class="text-1 text-white/70 text-nowrap"
+              class="text-1 text-white/70 text-nowrap cursor-pointer"
           >
-            <a :href="`#${ link.to }`">{{ link.title }}</a>
+            <a>{{ link.title }}</a>
           </li>
           <li class="text-1 text-white/70 flex items-center gap-2">
             <IconSearch/>

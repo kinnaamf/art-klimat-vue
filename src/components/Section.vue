@@ -5,6 +5,7 @@ const props = defineProps<{
   background?: string;
   spacing?: string;
   fullWidth?: boolean;
+  id: string;
 }>()
 
 const spacingClass = computed(() => {
@@ -22,6 +23,7 @@ const spacingClass = computed(() => {
 <template>
   <section :style="{ backgroundColor: `${background}` }"
            :class="spacingClass"
+           :id="id"
   >
     <div :class="fullWidth ? '' : 'container'">
       <slot/>
