@@ -2,27 +2,13 @@
 
 import FooterColumn from "@/components/FooterColumn.vue";
 
-const services = [
-  { label: 'Проектирование', to: '/' },
-  { label: 'Производство', to: '/' },
-  { label: 'Монтаж', to: '/' },
-  { label: 'Пусконаладка', to: '/' },
-]
+import { useFooter } from "@/composables/useFooter.ts";
 
-const products = [
-  { label: 'Воздуховоды', to: '/' },
-  { label: 'Круглые фасонные части', to: '/' },
-  { label: 'Прямоугольные фасонные части', to: '/' },
-  { label: 'Элементы систем вентиляции', to: '/' },
-  { label: 'Нестандартные изделия', to: '/' },
-]
-
-const menu = [
-  { label: 'Производство', to: '/' },
-  { label: 'Объекты', to: '/' },
-  { label: 'О компании', to: '/' },
-  { label: 'Контакты', to: '/' },
-]
+const {
+  services,
+  products,
+  menu,
+} = useFooter()
 
 </script>
 
