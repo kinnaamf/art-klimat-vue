@@ -86,52 +86,92 @@
     @apply flex gap-24;
   }
 
-  .app-form-dark {
-    @apply bg-darkgray rounded-3xl text-white p-12
+  .app-form--dark {
+    @apply bg-darkgray rounded-3xl p-12 text-white;
   }
 
-  .app-form-light {
-    @apply bg-none text-darkgray
+  .app-form--light {
+    @apply text-darkgray;
   }
 
-  .app-form-input {
-    @apply px-[22px] py-[18px] rounded-2xl w-1/2
+  .app-form__form {
+    @apply space-y-8;
   }
 
-  .app-form-input-dark {
-    @apply bg-white/10 text-white
+  .app-form__header {
+    @apply space-y-4;
   }
 
-  .app-form-input-dark::placeholder {
-    @apply text-white/50
+  .app-form__description {
+    @apply !text-white;
   }
 
-  .app-form-input-light {
-    @apply bg-black/5 text-darkgray
+  .app-form__fields {
+    @apply flex flex-col gap-4;
   }
 
-  .app-form-input-light::placeholder {
-    @apply  text-darkgray/50
+  .app-form__row {
+    @apply flex gap-4;
   }
 
-  .app-form-textarea {
-    @apply px-[22px] py-[18px] rounded-2xl w-full resize-none
+  .app-form__input {
+    @apply w-1/2 rounded-2xl px-[22px] py-[18px];
   }
 
-  .app-form-textarea-light {
-    @apply bg-black/5 text-darkgray
+  .app-form__input--dark {
+    @apply bg-white/10 text-white;
   }
 
-  .app-form-textarea-dark {
-    @apply bg-white/10
+  .app-form__input--dark::placeholder {
+    @apply text-white/50;
   }
 
-  .app-form-textarea-light::placeholder {
-    @apply  text-darkgray/50
+  .app-form__input--light {
+    @apply bg-black/5 text-darkgray;
   }
 
-  .app-form-textarea-dark::placeholder {
-    @apply text-white/50
+  .app-form__input--light::placeholder {
+    @apply text-darkgray/50;
+  }
+
+  .app-form__textarea {
+    @apply w-full resize-none rounded-2xl px-[22px] py-[18px];
+  }
+
+  .app-form__textarea--dark {
+    @apply bg-white/10 text-white;
+  }
+
+  .app-form__textarea--dark::placeholder {
+    @apply text-white/50;
+  }
+
+  .app-form__textarea--light {
+    @apply bg-black/5 text-darkgray;
+  }
+
+  .app-form__textarea--light::placeholder {
+    @apply text-darkgray/50;
+  }
+
+  .app-form__consent {
+    @apply flex cursor-pointer items-start gap-4;
+  }
+
+  .app-form__checkbox {
+    @apply flex h-6 w-6 shrink-0 items-center justify-center rounded-[6px] bg-white;
+  }
+
+  .app-form__checkbox--checked {
+    @apply bg-orange;
+  }
+
+  .app-form__link {
+    @apply text-orange;
+  }
+
+  .app-form__error {
+    @apply mt-2 text-sm text-red-500;
   }
 
   /* BUTTON STYLES */

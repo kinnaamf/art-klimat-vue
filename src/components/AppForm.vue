@@ -7,63 +7,85 @@ const props = withDefaults(defineProps<{
   showHeader?: boolean
   title: string
   description?: string
-  theme?: 'dark' | 'light' | null
+  theme?: "dark" | "light" | null
 }>(), {
   showHeader: true,
-  title: 'Оставьте заявку',
-  description: 'Заполните форму, и наши специалисты свяжутся с вами в ближайшее время',
+  title: "Оставьте заявку",
+  description: "Заполните форму, и наши специалисты свяжутся с вами в ближайшее время",
   theme: "dark",
-})
+});
 
 const emit = defineEmits<{
   submit: [payload: { name: string; phoneNumber: string; comment: string }]
-}>()
+}>();
 
 const formFields = reactive({
   name: "",
   phoneNumber: "",
-  comment: ""
-})
+  comment: "",
+});
 
-const isChecked = ref<boolean>(false);
-const showConsentError = ref<boolean>(false);
+const isChecked = ref(false);
+const showConsentError = ref(false);
 
 const handleSubmit = () => {
   if (!isChecked.value) {
     showConsentError.value = true;
     return;
   }
+
   showConsentError.value = false;
-  emit('submit', { ...formFields });
-}
+  emit("submit", { ...formFields });
+};
 </script>
 
 <template>
-  <div :class="theme === 'dark' ? 'app-form-dark' : 'app-form-light'">
-    <form class="space-y-8" @submit.prevent="handleSubmit">
-      <div v-if="showHeader" class="space-y-4">
-        <h3 class="h3">{{ props.title }}</h3>
-        <span class="text-1 text-white">{{ props.description }}</span>
+  <div
+      class="app-form"
+      :class="theme === 'dark'
+      ? 'app-form--dark'
+      : 'app-form--light'"
+  >
+    <form
+        class="app-form__form"
+        @submit.prevent="handleSubmit"
+    >
+      <div
+          v-if="showHeader"
+          class="app-form__header"
+      >
+        <h3 class="app-form__title h3">
+          {{ props.title }}
+        </h3>
+
+        <span class="app-form__description text-1">
+          {{ props.description }}
+        </span>
       </div>
 
-      <div class="flex flex-col gap-4">
-        <div class="flex gap-4">
+      <div class="app-form__fields">
+        <div class="app-form__row">
           <input
               v-model="formFields.name"
               type="text"
               name="name"
               placeholder="Имя"
-              class="text-big app-form-input"
-              :class="theme === 'dark' ? 'app-form-input-dark' : 'app-form-input-light'"
+              class="app-form__input text-big"
+              :class="theme === 'dark'
+              ? 'app-form__input--dark'
+              : 'app-form__input--light'"
               required
           />
+
           <input
               v-model="formFields.phoneNumber"
               type="tel"
               name="phoneNumber"
               placeholder="Номер телефона"
-              class="text-big app-form-input"
-              :class="theme === 'dark' ? 'app-form-input-dark' : 'app-form-input-light'"
+              class="app-form__input text-big"
+              :class="theme === 'dark'
+              ? 'app-form__input--dark'
+              : 'app-form__input--light'"
               required
           />
         </div>
@@ -72,41 +94,72 @@ const handleSubmit = () => {
             v-model="formFields.comment"
             name="comment"
             placeholder="Комментарий"
-            class="text-big app-form-textarea"
-            :class="theme === 'dark' ? 'app-form-textarea-dark' : 'app-form-textarea-light'"
+            class="app-form__textarea text-big"
+            :class="theme === 'dark'
+            ? 'app-form__textarea--dark'
+            : 'app-form__textarea--light'"
         />
       </div>
 
-      <div>
-        <label for="checkbox" class="flex items-start gap-4 cursor-pointer">
+      <div class="app-form__consent-wrapper">
+        <label
+            for="checkbox"
+            class="app-form__consent"
+        >
           <input
               id="checkbox"
               v-model="isChecked"
               type="checkbox"
-              name="checkbox"
               hidden
           >
+
           <div
-              class="w-6 h-6 rounded-[6px] flex items-center justify-center shrink-0"
-              :class="isChecked ? 'bg-orange' : 'bg-white'"
+              class="app-form__checkbox"
+              :class="{ 'app-form__checkbox--checked': isChecked }"
           >
             <IconCheck v-if="isChecked" />
           </div>
 
-          <span :class="theme === 'dark' ? 'text-white' : 'text-darkgray'" class="text-big">
+          <span
+              class="app-form__consent-text text-big"
+              :class="theme === 'dark'
+              ? 'text-white'
+              : 'text-darkgray'"
+          >
             Я ознакомлен(а) с
-            <a class="text-orange" href="#">Политикой конфиденциальности</a>
+            <a
+                href="#"
+                class="app-form__link"
+            >
+              Политикой конфиденциальности
+            </a>
             и даю согласие <br>
             на обработку
-            <a class="text-orange" href="#">персональных данных</a>
+            <a
+                href="#"
+                class="app-form__link"
+            >
+              персональных данных
+            </a>
           </span>
         </label>
-        <p v-if="showConsentError" class="text-red-500 text-sm mt-2">
+
+        <p
+            v-if="showConsentError"
+            class="app-form__error"
+        >
           Необходимо согласие на обработку персональных данных
         </p>
       </div>
 
-      <BaseButton type="submit" variant="primary" size="lg">Оставить заявку</BaseButton>
+      <BaseButton
+          type="submit"
+          variant="primary"
+          size="lg"
+          class="app-form__submit"
+      >
+        Оставить заявку
+      </BaseButton>
     </form>
   </div>
 </template>
@@ -114,3 +167,4 @@ const handleSubmit = () => {
 <style scoped lang="postcss">
 
 </style>
+

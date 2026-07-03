@@ -9,7 +9,6 @@ import ContactSection from "@/components/sections/ContactSection.vue";
 import AboutSection from "@/components/sections/about/AboutSection.vue";
 import ProjectsSection from "@/components/sections/projects/ProjectsSection.vue";
 import ProductsSection from "@/components/sections/products/ProductsSection.vue";
-import AdditionalInfo from "@/components/sections/AdditionalInfo.vue";
 import FeatureSection from "@/components/sections/feature/FeatureSection.vue";
 import ProductionSection from "@/components/sections/production/ProductionSection.vue";
 
