@@ -23,27 +23,27 @@ const partnershipList = [
 
 <template>
   <div>
-    <div class="max-w-[1440px] mx-auto px-16">
+    <div class="partnership__container">
       <SectionTitle>
         Сферы для <span class="text-orange">сотрудничества</span>
       </SectionTitle>
     </div>
 
-    <div class="mt-12">
+    <div class="partnership__list">
       <div
           v-for="(item, idx) in partnershipList"
           :key="item.title"
-          class="border-t border-darkgray/10"
-          :class="idx === partnershipList.length - 1 ? 'border-b' : ''"
+          class="partnership__item"
+          :class="idx === partnershipList.length - 1 ? 'partnership__item-last' : ''"
       >
-        <div class="max-w-[1440px] mx-auto py-10 px-16">
-          <div class="flex justify-between gap-8">
-            <div class="flex items-start gap-4">
+        <div class="partnership__item-container">
+          <div class="partnership__content">
+            <div class="partnership__heading">
               <h2 class="h2">{{ item.title }}</h2>
               <span class="text-1">{{ item.count }} проектов</span>
             </div>
 
-            <span class="text-big max-w-[480px]">
+            <span class="text-big partnership__description">{{ item.description }}
               {{ item.description }}
             </span>
           </div>
