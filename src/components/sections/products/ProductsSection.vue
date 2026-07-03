@@ -11,8 +11,8 @@ const { products } = useProducts();
 
 <template>
   <div class="px-16">
-    <div class="space-y-12">
-      <div class="flex flex-col gap-4">
+    <div class="products__container">
+      <div class="products__header">
         <SectionTitle>Наша <span class="text-orange">продукция</span></SectionTitle>
         <SectionDescription>Мы предлагаем качественные и надежные вентиляционные изделия по доступным ценам
         </SectionDescription>
@@ -20,7 +20,7 @@ const { products } = useProducts();
 
       <ProductsList :products="products"/>
 
-      <div class="flex justify-center">
+      <div class="products__action">
         <BaseButton variant="primary" size="lg">Посмотреть ещё</BaseButton>
       </div>
     </div>

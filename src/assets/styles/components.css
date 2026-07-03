@@ -327,17 +327,37 @@
 
   /* PRODUCTS SECTION STYLES */
 
-  .products-list {
+  .products__container {
+    @apply space-y-12;
+  }
+
+  .products__header {
+    @apply flex flex-col gap-4;
+  }
+
+  .products__action {
+    @apply flex justify-center;
+  }
+
+  .products__list {
     @apply grid grid-cols-5 gap-4
   }
 
-  .product-item {
+  .product-card {
     @apply h-[425px] w-[250px] flex flex-col gap-2;
     flex: 1 0 0;
   }
 
-  .product-text-container {
+  .product-card__content {
     @apply flex flex-col gap-1;
+  }
+
+  .product-card__title {
+    @apply whitespace-pre-line mt-2;
+  }
+
+  .product-card__meta {
+    @apply mt-1;
   }
 
   /* ABOUT SECTION STYLES */

@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-<div class="products-list">
+<div class="products__list">
   <div v-for="product in products">
     <ProductItem :product="product" />
   </div>
