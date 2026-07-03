@@ -29,11 +29,11 @@
   }
 
   .header__menu-item {
-    @apply text-white/70 text-nowrap cursor-pointer;
+    @apply !text-white/70 text-nowrap cursor-pointer;
   }
 
   .header__search {
-    @apply text-white/70 flex items-center gap-2;
+    @apply !text-white/70 flex items-center gap-2 cursor-pointer;
   }
 
   .header__actions {
