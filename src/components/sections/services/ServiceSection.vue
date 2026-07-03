@@ -23,9 +23,9 @@ const rowTwo = [
       Полный цикл <span class="text-orange">услуг</span>
     </SectionTitle>
 
-    <div class="services-grid mt-12">
-      <ServiceRow :cards="rowOne" class="grid-one"/>
-      <ServiceRow :cards="rowTwo" class="grid-two"/>
+    <div class="services__grid mt-12">
+      <ServiceRow :cards="rowOne" class="services__row--top"/>
+      <ServiceRow :cards="rowTwo" class="services__row--bottom"/>
       <AppForm />
       <ServiceContacts />
     </div>

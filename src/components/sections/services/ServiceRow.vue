@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="gap-6 inline-grid">
+  <div class="service-row">
     <ServiceCard v-for="card in cards" :key="card.type" :card="card"/>
   </div>
 </template>

@@ -248,34 +248,32 @@
     @apply relative rounded-3xl bg-white h-[440px] w-full overflow-hidden
   }
 
-  .service-title {
+  .service-card__title {
    @apply absolute bottom-12 left-12 z-40
   }
 
-  .grid-one {
+  .services__row--top {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.50fr);
     grid-template-rows: repeat(1, fit-content(100%));
   }
 
-  .grid-two {
+  .services__row--bottom {
     grid-template-columns: minmax(0, 1.50fr) minmax(0, 1fr);
     grid-template-rows: repeat(1, fit-content(100%));
   }
 
-  .services-grid {
+  .services__grid {
     display: grid;
     grid-template-columns: minmax(0, 1.50fr) minmax(0, 1fr);
     gap: 1.5rem;
   }
 
-  .services-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.50fr) minmax(0, 1fr);
-    gap: 1.5rem;
-  }
-
-  .grid-one, .grid-two {
+  .services__row--top, .services__row--bottom {
     grid-column: 1 / -1;
+  }
+
+  .service-row {
+    @apply gap-6 inline-grid
   }
 
   .img-planning {
@@ -304,6 +302,26 @@
 
   .img-commissioning {
     @apply relative left-0 w-full object-contain pointer-events-none select-none rounded-3xl object-top;
+  }
+
+  .service-contacts__container {
+    @apply bg-orange text-white rounded-3xl p-12 flex flex-col justify-between;
+  }
+
+  .service-contacts__grid {
+    @apply grid grid-cols-2 grid-rows-2 h6 mt-6 gap-x-6 gap-y-3;
+  }
+
+  .service-contacts__label {
+    @apply text-white/60;
+  }
+
+  .service-contacts__address {
+    @apply mt-px;
+  }
+
+  .service-contacts__schedule {
+    @apply text-white/60 mt-6;
   }
 
   /* PRODUCTION SECTION STYLES */
