@@ -441,4 +441,42 @@
   .partnership__description {
     @apply max-w-[480px];
   }
+
+  /* PROJECT SECTION STYLES */
+
+  .projects__container {
+    @apply pt-20 border-t border-darkgray/10 space-y-12;
+  }
+
+  .projects__header {
+    @apply flex flex-col gap-4;
+  }
+
+  .projects__actions {
+    @apply flex justify-center
+  }
+
+  .projects-list {
+    @apply flex flex-col gap-12;
+  }
+
+  .projects-list__grid--primary {
+    @apply grid grid-cols-3 gap-6;
+  }
+
+  .projects-list__grid--secondary {
+    @apply grid grid-cols-4 gap-6;
+  }
+
+  .project-card {
+    @apply space-y-2;
+  }
+
+  .project-card__image {
+    @apply w-full rounded-2xl object-cover;
+  }
+
+  .project-card__content {
+    @apply space-y-2 p-2;
+  }
 }
