@@ -21,7 +21,7 @@ const {
       @mousemove="drag"
       @mouseup="stopDragging"
       @mouseleave="stopDragging"
-      class="feature-list"
+      class="features__list"
   >
     <div v-for="feature in featureData">
       <FeatureItem :feature="feature"/>

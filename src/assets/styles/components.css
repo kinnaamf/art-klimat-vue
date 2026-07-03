@@ -177,20 +177,24 @@
 
   /* FEATURE SECTION STYLES */
 
-  .feature-card {
-    @apply w-[375px] h-[500px] bg-white rounded-2xl;
+  .features__container {
+    @apply max-w-[1440px] mx-auto px-16;
   }
 
-  .feature-list {
+  .features__list {
     @apply flex gap-4 mt-12 cursor-grab overflow-x-auto scrollbar-none select-none active:cursor-grabbing pr-16;
     padding-left: max(4rem, calc((100vw - 1440px) / 2 + 4rem));
   }
 
-  .feature-image-container {
+  .feature-card {
+    @apply w-[375px] h-[500px] bg-white rounded-2xl;
+  }
+
+  .feature-card__icon {
     @apply px-[4rem] pt-[4rem] pb-8 flex items-center justify-center;
   }
 
-  .feature-content {
+  .feature-card__content {
     @apply p-8 flex flex-col gap-2;
   }
 

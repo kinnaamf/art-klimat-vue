@@ -8,10 +8,10 @@ defineProps<{
 
 <template>
   <div class="feature-card">
-    <div class="feature-image-container">
+    <div class="feature-card__icon">
       <component :is="feature.icon" class="h-[220px]"/>
     </div>
-    <div class="feature-content">
+    <div class="feature-card__content">
       <span class="h6">
         {{ feature.title }}
       </span>

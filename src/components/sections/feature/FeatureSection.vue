@@ -9,7 +9,7 @@ const { featureData } = useSlider();
 
 <template>
   <div class="overflow-hidden">
-    <div class="max-w-[1440px] mx-auto px-16">
+    <div class="features__container">
       <SectionTitle>
         Наши <span class="text-orange">преимущества</span>
       </SectionTitle>
