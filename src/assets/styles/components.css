@@ -6,6 +6,49 @@
     @apply fixed top-6 left-1/2 -translate-x-1/2 z-[100];
   }
 
+  /* FOOTER */
+
+  .app-footer {
+    @apply bg-[#1f1e1e];
+  }
+
+  .footer__container {
+    @apply max-w-[1440px] mx-auto text-white px-16 pt-16 pb-12;
+  }
+
+  .footer__content {
+    @apply flex justify-between gap-12;
+  }
+
+  .footer__brand {
+    @apply flex items-center gap-6;
+  }
+
+  .footer__brand h3 {
+    @apply text-white text-[28px] font-medium leading-8;
+  }
+
+  .footer__info {
+    @apply space-y-6 mt-10;
+  }
+
+  .footer__contacts {
+    @apply grid grid-cols-2 gap-x-8 gap-y-4;
+  }
+
+  .footer__divider {
+    @apply h-px bg-white/10 my-12;
+  }
+
+  .footer__bottom {
+    @apply flex gap-4;
+  }
+
+  .footer__navigation {
+    @apply flex gap-24;
+  }
+
+  /**/
   .app-form-dark {
     @apply bg-darkgray rounded-3xl text-white p-12
   }

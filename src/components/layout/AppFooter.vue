@@ -13,16 +13,15 @@ const {
 </script>
 
 <template>
-<div class="bg-[#1f1e1e]">
-  <div class="max-w-[1440px] mx-auto text-white px-16 pt-16 pb-12">
-    <div class="flex justify-between gap-12">
+  <div class="footer__container">
+    <div class="footer__content">
       <div>
-        <div class="flex items-center gap-6">
+        <div class="footer__brand">
           <img src="/images/logo.png" alt="" class="w-14 h-14">
-          <h3 class="text-white text-[28px] font-medium leading-8">Арт-Климат</h3>
+          <h3 class="">Арт-Климат</h3>
         </div>
-        <div class="space-y-6 mt-10">
-          <div class="grid grid-cols-2 gap-x-8 gap-y-4">
+        <div class="footer__info">
+          <div class="footer__contacts">
             <span class="text-1-bold">Telegram</span>
             <span class="text-1-bold">WhatsApp</span>
             <span class="text-1-bold">+7 967 533-67-77</span>
@@ -38,20 +37,19 @@ const {
           </div>
         </div>
       </div>
-      <div class="flex gap-24">
+      <div class="footer__navigation">
         <FooterColumn title="Услуги" :links="services"/>
         <FooterColumn title="Продукция" :links="products"/>
         <FooterColumn title="Меню" :links="menu"/>
       </div>
     </div>
-    <div class="h-px bg-white/10 my-12"></div>
-    <div class="flex gap-4">
+    <div class="footer__divider"></div>
+    <div class="footer__bottom">
       <a href="" class="text-1 text-left !text-white/60 w-1/3">Политика конфиденциальности</a>
       <span class="text-1 text-center !text-white/60 w-1/3">© 2026 «Арт-Климат». Все права защищены</span>
       <span class="text-1 text-right !text-white/60 w-1/3">UX/UI дизайн от UxPRO</span>
     </div>
   </div>
-</div>
 </template>
 
 <style scoped lang="postcss">

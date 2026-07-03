@@ -45,7 +45,7 @@ const sections = [
     <component :is="section.component"/>
   </Section>
 
-  <footer>
+  <footer class="app-footer">
     <AppFooter/>
   </footer>
 </template>
