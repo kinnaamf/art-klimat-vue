@@ -14,7 +14,7 @@ defineProps<{
         <ProjectItem :project="project" imageClass="h-[316px]"/>
       </div>
     </div>
-    <div class="">
+    <div class="projects-list__grid--secondary">
       <div v-for="project in projects.slice(3)" :key="project.id">
         <ProjectItem :project="project" imageClass="h-[230px]"/>
       </div>
