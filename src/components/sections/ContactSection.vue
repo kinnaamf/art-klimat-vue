@@ -5,13 +5,13 @@ import AppForm from "@/components/AppForm.vue";
 
 <template>
   <div class="px-16">
-    <div class="border-t border-t-darkgray/10 pt-20">
-      <div class="flex justify-between gap-6">
-        <div class="space-y-6">
+    <div class="contact__container">
+      <div class="contact__content">
+        <div class="contact__info">
           <h2 class="h1">
             Оставьте заявку, чтобы обсудить проект
           </h2>
-          <p class="max-w-[480px] text-big">
+          <p class="contact__description text-big">
             Проконсультируем, подберём оборудование, рассчитаем стоимость проекта
           </p>
         </div>

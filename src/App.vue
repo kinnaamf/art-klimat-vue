@@ -20,7 +20,6 @@ const sections = [
   { component: HeroSection, background: '#3e4041', spacing: 'hero', id: 'hero' },
   { component: FeatureSection, spacing: 'md', fullWidth: true, id: 'feature' },
   { component: ServiceSection, spacing: 'md', id: 'service' },
-  { component: AdditionalInfo, spacing: 'custom', id: 'additional-info' },
   { component: ProductionSection, spacing: 'md', id: 'production' },
   { component: PartnershipSection, spacing: 'md', fullWidth: true, id: 'partnership' },
   { component: ProductsSection, background: '#ffffff', spacing: 'product', id: 'products' },

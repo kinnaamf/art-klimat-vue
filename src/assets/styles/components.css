@@ -479,4 +479,22 @@
   .project-card__content {
     @apply space-y-2 p-2;
   }
+
+  /* CONTACT SECTION STYLES */
+
+  .contact__container {
+    @apply border-t border-t-darkgray/10 pt-20;
+  }
+
+  .contact__content {
+    @apply flex justify-between gap-6;
+  }
+
+  .contact__info {
+    @apply space-y-6;
+  }
+
+  .contact__description {
+    @apply max-w-[480px];
+  }
 }
