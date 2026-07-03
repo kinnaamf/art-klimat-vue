@@ -19,29 +19,29 @@ const { isVisible: textVisible } = useIntersection(trigger3);
 
 <template>
   <div class="px-16">
-    <div class="production-container">
+    <div class="production__container">
       <div class="flex items-center gap-2.5 h-7 shrink-0 w-[300px]">
-        <div class="circle"></div>
+        <div class="production__label-dot"></div>
         <span class="text-big text-darkgray/50">О компании</span>
       </div>
-      <div class="space-y-12">
+      <div class="production__content">
         <h1 class="h1">Производство</h1>
         <h2 class="h2">
           Наша компания предоставляет широкий ассортимент вентиляционных изделий, которые отличаются высоким качеством
           и надёжностью. Вы можете выбрать<br>из различных
           <span
               ref="trigger1"
-              class="transition-all duration-[2s] production-trigger-1"
+              class="production__subtitle-highlight production-trigger-1"
               :class="titleVisible ? 'text-darkgray' : 'text-darkgray/40'"
           >
             моделей и размеров, подходящих для любых помещений и условий
         эксплуатации</span>
         </h2>
-        <div class="production-stats-container">
-          <div class="production-stat-item">
+        <div class="production__stats">
+          <div class="production__stat-item">
             <h3
                 ref="trigger2"
-                class="stat-item-title production-trigger-2 transition-all duration-[2s]"
+                class="stat-item-title production-trigger-2 production__stat-value"
                 :class="statsVisible ? 'text-orange' : 'text-orange/20'"
             >
               850 000 м²
@@ -52,7 +52,7 @@ const { isVisible: textVisible } = useIntersection(trigger3);
           </div>
           <div class="production-stat-item">
             <h3 ref="trigger2"
-                class="stat-item-title production-trigger-2 transition-all duration-[2s]"
+                class="stat-item-title production-trigger-2 production__stat-value"
                 :class="statsVisible ? 'text-orange' : 'text-orange/20'"
             >
               1 800 400
@@ -63,7 +63,7 @@ const { isVisible: textVisible } = useIntersection(trigger3);
           </div>
         </div>
         <h4 ref="textVisible"
-            class="h4 production-trigger-3 transition-all duration-[2s]"
+            class="h4 production-trigger-3 production__description"
             :class="textVisible ? '!text-darkgray' : '!text-darkgray/40'"
         >
           Мы гарантируем, что каждая продукция соответствует строгим стандартам и прослужит долго. При этом наши цены

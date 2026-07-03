@@ -15,24 +15,24 @@ const {
 </script>
 
 <template>
-  <div class="relative w-full flex gap-6 mt-16">
-    <div class="relative rounded-2xl overflow-hidden">
+  <div class="production-slider">
+    <div class="production-slider__main">
       <img
           :key="current"
           :src="slides[current].main"
           :alt="slides[current].alt"
-          class="w-[650px] h-[365px] object-cover"
+          class="production-slider__image"
       >
 
-      <div class="absolute bottom-12 left-12 flex gap-3">
+      <div class="production-slider__controls">
         <div
             @click="prev"
-            class="bg-white h-16 w-16 flex items-center justify-center rounded-full cursor-pointer">
+            class="production-slider__button">
           <IconChevron/>
         </div>
         <div
             @click="next"
-            class="bg-white h-16 w-16 flex items-center justify-center rounded-full cursor-pointer rotate-180">
+            class="production-slider__button rotate-180">
           <IconChevron/>
         </div>
       </div>
@@ -41,7 +41,7 @@ const {
     <img
         :src="slides[nextIndex].main"
         :alt="slides[nextIndex].alt"
-        class="self-start w-[185px] h-[185px] object-cover aspect-square rounded-2xl"
+        class="production-slider__thumbnail"
       >
   </div>
 </template>
