@@ -86,6 +86,20 @@
     @apply flex gap-24;
   }
 
+  .footer-column {
+    @apply text-xl;
+  }
+
+  .footer-column__nav {
+    @apply flex flex-col gap-4 mt-6 font-normal;
+  }
+
+  .footer-column__link {
+    @apply !text-white/60;
+  }
+
+  /* APP FORM STYLES */
+
   .app-form--dark {
     @apply bg-darkgray rounded-3xl p-12 text-white;
   }
@@ -309,7 +323,7 @@
   }
 
   .service-contacts__grid {
-    @apply grid grid-cols-2 grid-rows-2 h6 mt-6 gap-x-6 gap-y-3;
+    @apply grid grid-cols-2 grid-rows-2 mt-6 gap-x-6 gap-y-3;
   }
 
   .service-contacts__label {

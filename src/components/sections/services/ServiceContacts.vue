@@ -7,7 +7,7 @@
     <div>
       <h3 class="h3">Контакты</h3>
 
-        <div class="service-contacts__grid">
+        <div class="service-contacts__grid h6">
         <div>
           <span>+7 967 533-67-77</span></div>
         <div>
