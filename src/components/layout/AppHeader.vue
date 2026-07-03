@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { computed, ref, onMounted } from "vue";
 import IconTelegram from "@/components/icons/IconTelegram.vue";
 import IconWhatsApp from "@/components/icons/IconWhatsApp.vue";
 import BaseButton from "@/components/ui/BaseButton.vue";
@@ -17,23 +16,23 @@ const {
 </script>
 
 <template>
-  <div class="flex gap-[10px]">
+  <div class="header__container">
     <div
         :class="isPastHero ? darkClass : lightClass"
-        class="flex items-center gap-6 py-1 pl-1 rounded-2xl shrink-0 transition-all duration-200">
-      <img src="/images/logo.png" alt="" class="w-12 h-12">
-      <nav class="mr-6">
-        <ul class="flex items-center gap-6">
+        class="header__nav-wrapper">
+      <img src="/images/logo.png" alt="" class="header__logo">
+      <nav class="header__nav">
+        <ul class="header__menu">
           <li
               v-for="link in links"
               :key="link.id"
               @click.prevent="activeLink = link.id; scrollTo(link.to)"
               :class="{ 'active': activeLink === link.id }"
-              class="text-1 text-white/70 text-nowrap cursor-pointer"
+              class="header__menu-item text-1"
           >
             <a>{{ link.title }}</a>
           </li>
-          <li class="text-1 text-white/70 flex items-center gap-2">
+          <li class="text-1 header__search">
             <IconSearch/>
             Поиск
           </li>
@@ -41,13 +40,13 @@ const {
       </nav>
     </div>
     <div
-        class="flex items-center gap-1 p-1 rounded-2xl shrink-0 transition-all duration-200"
+        class="header__actions"
         :class="isPastHero ? darkClass : lightClass">
-      <div class="flex items-center justify-center w-12 h-12 rounded-2xl transition-all duration-200"
+      <div class="header__social"
            :class="isPastHero ? darkClass : lightClass">
         <IconTelegram/>
       </div>
-      <div class="flex items-center justify-center w-12 h-12 rounded-2xl transition-all duration-200"
+      <div class="header__social"
            :class="isPastHero ? darkClass : lightClass">
         <IconWhatsApp/>
       </div>

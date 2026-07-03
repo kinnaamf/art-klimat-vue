@@ -2,8 +2,46 @@
 
 @layer components {
 
+  /* HEADER */
+
   .app-header {
     @apply fixed top-6 left-1/2 -translate-x-1/2 z-[100];
+  }
+
+  .header__container {
+    @apply flex gap-[10px];
+  }
+
+  .header__nav-wrapper {
+    @apply flex items-center gap-6 py-1 pl-1 rounded-2xl shrink-0 transition-all duration-200;
+  }
+
+  .header__logo {
+    @apply w-12 h-12;
+  }
+
+  .header__nav {
+    @apply mr-6;
+  }
+
+  .header__menu {
+    @apply flex items-center gap-6;
+  }
+
+  .header__menu-item {
+    @apply text-white/70 text-nowrap cursor-pointer;
+  }
+
+  .header__search {
+    @apply text-white/70 flex items-center gap-2;
+  }
+
+  .header__actions {
+    @apply flex items-center gap-1 p-1 rounded-2xl shrink-0 transition-all duration-200;
+  }
+
+  .header__social {
+    @apply flex items-center justify-center w-12 h-12 rounded-2xl transition-all duration-200;
   }
 
   /* FOOTER */
@@ -48,7 +86,6 @@
     @apply flex gap-24;
   }
 
-  /**/
   .app-form-dark {
     @apply bg-darkgray rounded-3xl text-white p-12
   }
