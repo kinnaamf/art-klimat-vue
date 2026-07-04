@@ -1,5 +1,7 @@
 import { computed, onMounted, ref } from "vue";
 
+const activeLink = ref(1)
+
 export const  useHeader = () => {
   const links = [
     {
@@ -39,8 +41,6 @@ export const  useHeader = () => {
     },
   ]
 
-  const activeLink = ref(1)
-
   const lightClass = computed(() => {
     return 'bg-white/10'
   })
@@ -65,17 +65,9 @@ export const  useHeader = () => {
     observer.observe(hero);
   })
 
-  const scrollTo = (to: string) => {
-    const el = document.getElementById(to);
-    if (!el) return
-
-    el.scrollIntoView({ behavior: 'smooth' });
-  }
-
   return {
     links,
     activeLink,
-    scrollTo,
     lightClass,
     darkClass,
     isPastHero
