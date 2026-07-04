@@ -8,12 +8,15 @@ import IconMenu from "@/components/icons/IconMenu.vue";
 import { ref } from "vue";
 import AppNavbar from "@/components/AppNavbar.vue";
 import AppMenu from "@/components/AppMenu.vue";
+import { useScroll } from "@/composables/useScroll.ts";
 
 const {
   lightClass,
   darkClass,
   isPastHero
 } = useHeader()
+
+const { scrollTo } = useScroll();
 
 const isMenuOpen = ref<boolean>(false)
 
@@ -51,7 +54,7 @@ const toggleMenu = () => {
       >
         <IconMenu />
       </div>
-      <BaseButton variant="primary" size="md" class="header__action">Оставьте заявку</BaseButton>
+      <BaseButton variant="primary" size="md" class="header__action" @click="scrollTo('contact')">Оставьте заявку</BaseButton>
     </div>
   </div>
 
