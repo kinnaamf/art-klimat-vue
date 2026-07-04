@@ -156,7 +156,7 @@
   /* APP FORM STYLES */
 
   .app-form--dark {
-    @apply bg-darkgray rounded-3xl p-12 text-white;
+    @apply bg-darkgray rounded-3xl p-8 md:p-12 text-white;
   }
 
   .app-form--light {
@@ -180,11 +180,12 @@
   }
 
   .app-form__row {
-    @apply flex gap-4;
+    @apply flex flex-col gap-4
+    md:flex-row;
   }
 
   .app-form__input {
-    @apply w-1/2 rounded-2xl px-[22px] py-[18px];
+    @apply md:w-1/2 rounded-2xl px-[22px] py-[18px];
   }
 
   .app-form__input--dark {
@@ -328,11 +329,13 @@
   }
 
   .service-card {
-    @apply relative rounded-3xl bg-white h-[440px] w-full overflow-hidden
+    @apply relative rounded-3xl bg-white h-[354px] w-full overflow-hidden
+    md:h-[440px]
   }
 
   .service-card__title {
-   @apply absolute bottom-12 left-12 z-40
+   @apply absolute bottom-8 left-8 z-40
+   md:bottom-12 md:left-12
   }
 
   .services__row--top {
@@ -345,19 +348,44 @@
     grid-template-rows: repeat(1, fit-content(100%));
   }
 
-  .services__grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.50fr) minmax(0, 1fr);
-    gap: 1.5rem;
-  }
-
   .services__row--top, .services__row--bottom {
     grid-column: 1 / -1;
   }
 
-  .service-row {
-    @apply gap-6 inline-grid
+  .services__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
+
+  .service-row {
+    @apply flex flex-col gap-4;
+  }
+
+  @media (min-width: 768px) {
+    .services__grid {
+      grid-template-columns: minmax(0, 1.50fr) minmax(0, 1fr);
+      gap: 1.5rem;
+    }
+
+    .services__row--top {
+      grid-column: 1 / -1;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.50fr);
+      display: grid;
+    }
+
+    .services__row--bottom {
+      grid-column: 1 / -1;
+      grid-template-columns: minmax(0, 1.50fr) minmax(0, 1fr);
+      display: grid;
+    }
+
+    .service-row {
+      display: grid;
+      gap: 1.5rem;
+    }
+  }
+
 
   .img-planning {
     @apply relative left-0 w-full object-contain pointer-events-none select-none rounded-3xl object-left-top;
@@ -388,11 +416,12 @@
   }
 
   .service-contacts__container {
-    @apply bg-orange text-white rounded-3xl p-12 flex flex-col justify-between;
+    @apply bg-orange text-white rounded-3xl p-8 flex flex-col justify-between
+    md:p-12;
   }
 
-  .service-contacts__grid {
-    @apply grid grid-cols-2 grid-rows-2 mt-6 gap-x-6 gap-y-3;
+  .service-contacts__content {
+    @apply flex flex-col gap-3
   }
 
   .service-contacts__label {
@@ -400,7 +429,7 @@
   }
 
   .service-contacts__address {
-    @apply mt-px;
+    @apply mt-px md:w-[420px];
   }
 
   .service-contacts__schedule {

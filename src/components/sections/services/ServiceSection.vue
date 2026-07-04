@@ -18,12 +18,12 @@ const rowTwo = [
 </script>
 
 <template>
-  <div class="px-16">
+  <div class="px-6 md:px-16">
     <SectionTitle>
       Полный цикл <span class="text-orange">услуг</span>
     </SectionTitle>
 
-    <div class="services__grid mt-12">
+    <div class="services__grid mt-8 md:mt-12">
       <ServiceRow :cards="rowOne" class="services__row--top"/>
       <ServiceRow :cards="rowTwo" class="services__row--bottom"/>
       <AppForm />

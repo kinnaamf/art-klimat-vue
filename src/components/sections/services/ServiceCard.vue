@@ -7,7 +7,7 @@ defineProps<{
 
 <template>
   <div class="service-card">
-    <h3 class="h3 service-card__title">
+    <h3 class="h4 !text-darkgray md:h3 service-card__title">
       {{ card.title }}
     </h3>
 

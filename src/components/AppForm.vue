@@ -54,7 +54,7 @@ const handleSubmit = () => {
           v-if="showHeader"
           class="app-form__header"
       >
-        <h3 class="app-form__title h3">
+        <h3 class="app-form__title h4 !text-white md:h3">
           {{ props.title }}
         </h3>
 
