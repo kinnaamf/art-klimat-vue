@@ -2,7 +2,8 @@
 
 @layer components {
   .h1 {
-    @apply text-[4rem] font-medium leading-[72px] text-darkgray;
+    @apply text-[40px] font-medium leading-[48px]
+    md:text-[4rem] md:font-medium md:leading-[72px] md:text-darkgray;
   }
 
   .h2 {
@@ -22,7 +23,8 @@
   }
 
   .text-big {
-    @apply text-xl font-normal leading-7 -tracking-wide text-darkgray/60;
+    @apply text-darkgray/60 font-normal leading-6 text-base
+    md:text-xl md:font-normal md:leading-7 md:-tracking-wide md:text-darkgray/60;
   }
 
   .text-1 {

@@ -5,9 +5,9 @@
         <h1 class="h1 !text-white">
           Полный цикл вентиляции<br>с собственным производством
         </h1>
-        <span class="text-big !text-white/70">
-          Лидер услуг от проекта до пусконаладки воздуховодов и фасонных изделий для инжиниринга<br>и строительства
-        </span>
+        <h3 class="text-big !text-white/70 md:max-w-[960px]">
+          Лидер услуг от проекта до пусконаладки воздуховодов и фасонных изделий для инжиниринга и строительства
+        </h3>
       </div>
       <div class="hero-actions">
         <BaseButton variant="primary" size="lg" @click="scrollTo('contact')">Оставить заявку</BaseButton>
