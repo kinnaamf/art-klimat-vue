@@ -18,6 +18,10 @@
     @apply text-[2rem] font-medium leading-[40px] text-darkgray/40;
   }
 
+  .h5 {
+    @apply text-2xl font-medium leading-8;
+  }
+
   .h6 {
     @apply text-xl font-medium leading-7 -tracking-wide;
   }
@@ -41,6 +45,6 @@
   }
 
   .stat-item-title {
-    @apply text-[80px] font-medium leading-[88px] text-orange;
+    @apply text-[4rem] md:text-[64px] leading-[64px] font-medium md:leading-[88px] text-orange;
   }
 }
