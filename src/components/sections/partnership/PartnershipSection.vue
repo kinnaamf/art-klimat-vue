@@ -43,7 +43,7 @@ const partnershipList = [
               <span class="text-1">{{ item.count }} проектов</span>
             </div>
 
-            <span class="text-big partnership__description">{{ item.description }}
+            <span class="text-big partnership__description">
               {{ item.description }}
             </span>
           </div>
