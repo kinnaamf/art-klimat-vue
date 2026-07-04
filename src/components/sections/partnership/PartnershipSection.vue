@@ -39,8 +39,8 @@ const partnershipList = [
         <div class="partnership__item-container">
           <div class="partnership__content">
             <div class="partnership__heading">
-              <h2 class="h2">{{ item.title }}</h2>
-              <span class="text-1">{{ item.count }} проектов</span>
+              <h2 class="md:h2 h4 !text-darkgray w-[240px] md:w-full">{{ item.title }}</h2>
+              <span class="text-1 text-nowrap">{{ item.count }} проектов</span>
             </div>
 
             <span class="text-big partnership__description">
