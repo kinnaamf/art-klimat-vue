@@ -2,61 +2,73 @@
 import IconTelegram from "@/components/icons/IconTelegram.vue";
 import IconWhatsApp from "@/components/icons/IconWhatsApp.vue";
 import BaseButton from "@/components/ui/BaseButton.vue";
-import IconSearch from "@/components/icons/IconSearch.vue";
 import { useHeader } from "@/composables/useHeader.ts";
+import IconMenu from "@/components/icons/IconMenu.vue";
+
+import { ref } from "vue";
+import AppNavbar from "@/components/AppNavbar.vue";
+import AppMenu from "@/components/AppMenu.vue";
 
 const {
-  links,
-  activeLink,
-  scrollTo,
   lightClass,
   darkClass,
   isPastHero
 } = useHeader()
+
+const isMenuOpen = ref<boolean>(false)
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value
+
+  document.body.style.overflow = isMenuOpen.value ? 'hidden' : '';
+}
 </script>
 
 <template>
   <div class="header__container">
     <div
+        class="header__nav-wrapper"
         :class="isPastHero ? darkClass : lightClass"
-        class="header__nav-wrapper">
-      <img src="/images/logo.png" alt="" class="header__logo">
-      <nav class="header__nav">
-        <ul class="header__menu">
-          <li
-              v-for="link in links"
-              :key="link.id"
-              @click.prevent="activeLink = link.id; scrollTo(link.to)"
-              :class="{ 'active': activeLink === link.id }"
-              class="header__menu-item text-1"
-          >
-            <a>{{ link.title }}</a>
-          </li>
-          <li class="text-1 header__search">
-            <IconSearch/>
-            Поиск
-          </li>
-        </ul>
-      </nav>
+    >
+      <a href="/">
+        <img src="/images/logo.png" alt="" class="header__logo">
+      </a>
+
+      <AppNavbar/>
+
     </div>
     <div
         class="header__actions"
         :class="isPastHero ? darkClass : lightClass">
-      <div class="header__social"
-           :class="isPastHero ? darkClass : lightClass">
+      <div class="header__social">
         <IconTelegram/>
       </div>
-      <div class="header__social"
-           :class="isPastHero ? darkClass : lightClass">
+      <div class="header__social">
         <IconWhatsApp/>
       </div>
-      <BaseButton variant="primary" size="md">Оставьте заявку</BaseButton>
+      <div class="header__social header__burger"
+           @click="toggleMenu"
+      >
+        <IconMenu />
+      </div>
+      <BaseButton variant="primary" size="md" class="header__action">Оставьте заявку</BaseButton>
     </div>
   </div>
+
+  <Transition name="menu">
+    <AppMenu v-if="isMenuOpen" @closeMenu="toggleMenu"/>
+  </Transition>
 </template>
 
 <style scoped lang="postcss">
-.active {
-  color: white !important;
+.menu-enter-active,
+.menu-leave-active {
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.menu-enter-from,
+.menu-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
 }
 </style>

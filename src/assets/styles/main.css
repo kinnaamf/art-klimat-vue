@@ -22,6 +22,8 @@
   --color-darkgray: #1f1e1e;
   --color-orange: #f06210;
   --color-lightgray: #f4f1ef;
+
+  --breakpoint-xs: 402px;
 }
 
 * {

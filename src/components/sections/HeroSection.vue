@@ -10,7 +10,7 @@
         </span>
       </div>
       <div class="hero-actions">
-        <BaseButton variant="primary" size="lg">Оставить заявку</BaseButton>
+        <BaseButton variant="primary" size="lg" @click="scrollTo('contact')">Оставить заявку</BaseButton>
         <BaseButton variant="secondary" size="lg">Наши услуги</BaseButton>
       </div>
     </div>
@@ -23,5 +23,7 @@
 
 <script setup lang="ts">
 import BaseButton from "@/components/ui/BaseButton.vue";
+import { useScroll } from "@/composables/useScroll.ts";
 
+const { scrollTo } = useScroll();
 </script>

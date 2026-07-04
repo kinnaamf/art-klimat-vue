@@ -5,27 +5,33 @@
   /* HEADER */
 
   .app-header {
-    @apply fixed top-6 left-1/2 -translate-x-1/2 z-[100];
+    @apply fixed top-6 inset-x-6 z-[100]
+    md:left-1/2 md:right-auto md:-translate-x-1/2;
   }
 
   .header__container {
-    @apply flex gap-[10px];
+    @apply flex justify-between
+    md:gap-[10px];
   }
 
   .header__nav-wrapper {
-    @apply flex items-center gap-6 py-1 pl-1 rounded-2xl shrink-0 transition-all duration-200;
+    @apply items-center gap-6 p-1 rounded-2xl shrink-0 transition-all duration-200
+      md:py-1 md:pl-1 md:flex;
   }
 
   .header__logo {
-    @apply w-12 h-12;
+    @apply w-16 h-16
+    md:w-12 md:h-12;
   }
 
   .header__nav {
-    @apply mr-6;
+    @apply hidden mr-6
+    md:flex;
   }
 
   .header__menu {
-    @apply flex items-center gap-6;
+    @apply flex flex-col items-start gap-6
+    md:flex-row md:items-center;
   }
 
   .header__menu-item {
@@ -33,15 +39,64 @@
   }
 
   .header__search {
-    @apply !text-white/70 flex items-center gap-2 cursor-pointer;
+    @apply !text-white/70 items-center gap-2 cursor-pointer hidden
+    md:flex;
+  }
+
+  .header__search svg {
+    @apply w-4 h-4;
+  }
+
+  .active {
+    @apply !text-white;
   }
 
   .header__actions {
-    @apply flex items-center gap-1 p-1 rounded-2xl shrink-0 transition-all duration-200;
+    @apply flex items-center gap-1 p-1 rounded-2xl shrink-0 transition-all duration-200 cursor-pointer;
   }
 
   .header__social {
-    @apply flex items-center justify-center w-12 h-12 rounded-2xl transition-all duration-200;
+    @apply flex items-center justify-center w-16 h-16 rounded-2xl transition-all duration-200 bg-white/10
+    md:w-12 md:h-12;
+  }
+
+  .header__social svg {
+    @apply w-6 h-6 md:w-5 md:h-5;
+  }
+
+  .header__action {
+    @apply hidden md:block;
+  }
+
+  .header__burger {
+    @apply flex
+    md:hidden;
+  }
+
+  /* MENU */
+
+  .menu__container {
+    @apply fixed top-0 left-0 w-screen h-screen flex flex-col justify-between bg-darkgray/90 backdrop-blur-sm px-6 pt-6 pb-8;
+  }
+
+  .menu__close--container {
+    @apply h-[72px] w-full flex justify-end;
+  }
+
+  .menu__close--content {
+    @apply p-1 bg-white/10 h-full w-[72px] rounded-[20px];
+  }
+
+  .menu__close-btn {
+    @apply flex items-center justify-center bg-white/10 w-full h-full rounded-2xl cursor-pointer;
+  }
+
+  .menu__nav {
+    @apply block
+  }
+
+  .menu__nav li {
+    @apply text-[2rem] font-medium leading-[40px] text-darkgray/40
   }
 
   /* FOOTER */
