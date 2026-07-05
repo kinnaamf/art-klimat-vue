@@ -10,7 +10,7 @@ const { projects } = useProjects();
 </script>
 
 <template>
-  <div class="px-16">
+  <div class="px-6 md:px-16">
     <div class="projects__container">
       <div class="projects__header">
         <SectionTitle>Реализованные <span class="text-orange">объекты</span></SectionTitle>
@@ -21,7 +21,9 @@ const { projects } = useProjects();
       <ProjectList :projects="projects"/>
 
       <div class="projects__actions">
-        <BaseButton variant="primary" size="lg">Посмотреть всё</BaseButton>
+        <BaseButton variant="primary" size="lg" class="!px-4 !py-3 md:!px-6 md:!py-[18px]">
+          Посмотреть всё
+        </BaseButton>
       </div>
     </div>
   </div>

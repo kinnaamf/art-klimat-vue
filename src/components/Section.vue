@@ -13,7 +13,7 @@ const spacingClass = computed(() => {
     hero: '',
     md: 'py-16 md:py-24',
     lg: ' md:py-[128px]',
-    alt: ' md:pt-24 md:pb-[8rem]',
+    alt: 'pb-16 pt-24 md:pb-[8rem]',
     product: 'pt-24 pb-16 md:pt-[8rem] md:pb-24',
     contact: ' md:pt-20 md:pb-[8rem]',
   }[props.spacing || 'md']

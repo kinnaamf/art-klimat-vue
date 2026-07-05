@@ -659,7 +659,8 @@
   }
 
   .projects-list {
-    @apply flex flex-col gap-12;
+    @apply hidden
+    md:flex md:flex-col md:gap-12;
   }
 
   .projects-list__grid--primary {
@@ -671,7 +672,7 @@
   }
 
   .project-card {
-    @apply space-y-2;
+    @apply w-[320px] md:w-auto space-y-2;
   }
 
   .project-card__image {
@@ -680,6 +681,19 @@
 
   .project-card__content {
     @apply space-y-2 p-2;
+  }
+
+  .project-list-mobile__container {
+    @apply overflow-x-auto scrollbar-none
+  }
+
+  .project-list-mobile__content {
+    @apply flex gap-4
+    md:hidden;
+  }
+
+  .project-card__image-wrapper {
+
   }
 
   /* CONTACT SECTION STYLES */

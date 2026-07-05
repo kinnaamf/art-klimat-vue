@@ -1,5 +1,5 @@
 <template>
-  <h2 class="h1">
+  <h2 class="h3 md:h1">
     <slot/>
   </h2>
 </template>
