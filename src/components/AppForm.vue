@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { reactive, ref } from "vue";
+import { reactive, ref, useId } from "vue";
 import IconCheck from "@/components/icons/IconCheck.vue";
 import BaseButton from "@/components/ui/BaseButton.vue";
 
@@ -27,6 +27,7 @@ const formFields = reactive({
 
 const isChecked = ref(false);
 const showConsentError = ref(false);
+const checkboxId = useId();
 
 const handleSubmit = () => {
   if (!isChecked.value) {
@@ -103,14 +104,14 @@ const handleSubmit = () => {
 
       <div class="app-form__consent-wrapper">
         <label
-            for="checkbox"
+            :for="checkboxId"
             class="app-form__consent"
         >
           <input
-              id="checkbox"
+              :id="checkboxId"
               v-model="isChecked"
               type="checkbox"
-              hidden
+              class="sr-only"
           >
 
           <div
