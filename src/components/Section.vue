@@ -11,11 +11,11 @@ const props = defineProps<{
 const spacingClass = computed(() => {
   return {
     hero: '',
-    md: 'py-16 md:py-24',
-    lg: 'py-24 md:py-[128px]',
-    alt: 'pb-16 pt-24 md:pb-[8rem]',
-    product: 'pt-24 pb-16 md:pt-[8rem] md:pb-24',
-    contact: 'pt-12 pb-16 md:pt-20 md:pb-[8rem]',
+    md: 'py-16 lg:py-24',
+    lg: 'py-24 lg:py-[128px]',
+    alt: 'pb-16 pt-24 lg:pb-[8rem]',
+    product: 'pt-24 pb-16 lg:pt-[8rem] lg:pb-24',
+    contact: 'pt-12 pb-16 lg:pt-20 lg:pb-[8rem]',
   }[props.spacing || 'md']
 })
 </script>

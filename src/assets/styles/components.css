@@ -567,7 +567,7 @@
     }
 
     .about__gallery {
-        @apply flex flex-col w-full xl:inline-grid gap-6 self-stretch;
+        @apply flex flex-col w-full lg:inline-grid gap-6 self-stretch;
         grid-template-rows: repeat(1, fit-content(100%));
         grid-template-columns: minmax(0, 4.50fr) minmax(0, 1fr)
     }
@@ -585,6 +585,7 @@
     .about__image-secondary {
         @apply h-[120px] w-[120px]
         md:h-[190px] md:w-[190px]
+        lg:h-[170px] lg:w-[170px]
         xl:h-[235px] xl:w-[235px] aspect-square;
     }
 
