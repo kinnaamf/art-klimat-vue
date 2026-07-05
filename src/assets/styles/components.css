@@ -299,13 +299,7 @@
     }
 
     .features__list {
-        @apply flex gap-4 mt-12 cursor-grab overflow-x-auto scrollbar-none select-none active:cursor-grabbing pr-16 pl-6
-    }
-
-    @media (min-width: 768px) {
-        .features__list {
-            padding-left: max(4rem, calc((100vw - 1440px) / 2 + 4rem));
-        }
+        @apply flex gap-4 mt-12 cursor-grab overflow-x-auto overflow-y-hidden scrollbar-none select-none active:cursor-grabbing pr-16 pl-6
     }
 
     .feature-card {
