@@ -18,7 +18,7 @@ const rowTwo = [
 </script>
 
 <template>
-  <div class="px-6 md:px-16">
+  <div class="px-6 xl:px-16">
     <SectionTitle>
       Полный цикл <span class="text-orange">услуг</span>
     </SectionTitle>

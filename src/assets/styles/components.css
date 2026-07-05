@@ -557,6 +557,7 @@
     }
 
     /* ABOUT SECTION STYLES */
+
     .about__container {
         @apply space-y-12 mx-auto px-6
         xl:space-y-24 xl:px-16;
@@ -574,11 +575,13 @@
 
     .about__image-primary {
         @apply h-[200px]
+        md:h-[350px]
         xl:h-[600px] aspect-video;
     }
 
     .about__image-secondary {
         @apply h-[120px] w-[120px]
+        md:h-[190px] md:w-[190px]
         xl:h-[235px] xl:w-[235px] aspect-square;
     }
 

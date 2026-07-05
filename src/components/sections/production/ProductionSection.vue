@@ -18,7 +18,7 @@ const { isVisible: textVisible } = useIntersection(trigger3);
 </script>
 
 <template>
-  <div class="px-6 md:px-16">
+  <div class="px-6 xl:px-16">
     <div class="production__container">
       <div class="flex items-center gap-2.5 h-7 shrink-0 w-[420px]">
         <div class="production__label-dot"></div>

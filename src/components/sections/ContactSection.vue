@@ -5,7 +5,7 @@ import AppForm from "@/components/AppForm.vue";
 </script>
 
 <template>
-  <div class="px-6 md:px-16">
+  <div class="px-6 xl:px-16">
     <div class="contact__container">
       <div class="contact__content">
         <div class="contact__info">
