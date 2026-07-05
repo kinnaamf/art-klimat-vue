@@ -50,7 +50,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <Transition name="slide-up">
+  <Transition name="slide-up-header">
     <header class="app-header" v-if="!footerVisible">
       <AppHeader/>
     </header>
@@ -80,6 +80,8 @@ onMounted(() => {
 
 <style scoped>
 .slide-up-enter-active,
+.slide-up-header-enter-active,
+.slide-up-header-leave-active,
 .slide-up-leave-active {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -87,6 +89,12 @@ onMounted(() => {
 .slide-up-enter-from,
 .slide-up-leave-to {
   transform: translateY(100px);
+  opacity: 0;
+}
+
+.slide-up-header-enter-from,
+.slide-up-header-leave-to {
+  transform: translateY(-100px);
   opacity: 0;
 }
 </style>
