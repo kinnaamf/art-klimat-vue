@@ -704,11 +704,12 @@
   }
 
   .contact__content {
-    @apply flex justify-between gap-6;
+    @apply flex flex-col justify-between gap-6
+    md:flex-row;
   }
 
   .contact__info {
-    @apply space-y-6;
+    @apply space-y-4 md:space-y-6;
   }
 
   .contact__description {
