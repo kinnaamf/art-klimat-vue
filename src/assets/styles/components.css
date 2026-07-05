@@ -285,7 +285,7 @@
 
     .hero-actions {
         @apply flex flex-col gap-4 items-center w-full
-        xl:flex-row;
+        md:flex-row;
     }
 
     .hero-actions button {
