@@ -563,11 +563,12 @@
   /* ABOUT SECTION STYLES */
 
   .about__container {
-    @apply space-y-24 mx-auto px-6 md:px-16;
+    @apply space-y-12 mx-auto px-6
+    md:space-y-24 md:px-16;
   }
 
   .about__gallery {
-    @apply flex flex-col md:inline-grid gap-6 self-stretch;
+    @apply flex flex-col w-full md:inline-grid gap-6 self-stretch;
     grid-template-rows: repeat(1,fit-content(100%));
     grid-template-columns: minmax(0,4.50fr) minmax(0,1fr)
   }
