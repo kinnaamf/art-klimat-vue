@@ -50,9 +50,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <header class="app-header">
-    <AppHeader/>
-  </header>
+  <Transition name="slide-up">
+    <header class="app-header" v-if="!footerVisible">
+      <AppHeader/>
+    </header>
+  </Transition>
 
   <Transition name="slide-up">
     <BaseButton v-if="isPastHero && !contactVisible && !footerVisible && !isMenuOpen" @click="scrollTo('contact')"
