@@ -8,11 +8,11 @@
       <h3 class="h4 !text-white mb-6 md:h3">Контакты</h3>
 
         <div class="service-contacts__content h6">
-        <div class="flex justify-between gap-4">
+        <div class="service-contacts__row">
           <span>+7 967 533-67-77</span>
           <span>Telegram</span>
         </div>
-        <div class="flex justify-between gap-4">
+        <div class="service-contacts__row">
           <span>info@ventzakaz.ru</span>
           <span>WhatsApp</span>
         </div>

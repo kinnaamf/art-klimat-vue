@@ -322,6 +322,7 @@
     }
 
     /* SERVICE SECTION STYLES */
+
     .service-row-container {
         @apply flex flex-col items-start gap-6 self-stretch mt-12
     }
@@ -360,7 +361,7 @@
         @apply flex flex-col gap-4;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 1280px) {
         .services__grid {
             grid-template-columns: minmax(0, 1.50fr) minmax(0, 1fr);
             gap: 1.5rem;
@@ -432,6 +433,14 @@
 
     .service-contacts__schedule {
         @apply text-white/60 mt-6;
+    }
+
+    .service-contacts__content {
+        @apply flex flex-col gap-3
+    }
+
+    .service-contacts__row {
+        @apply flex flex-row gap-8
     }
 
     /* PRODUCTION SECTION STYLES */
