@@ -57,7 +57,9 @@ export const  useHeader = () => {
     if (!hero) return
 
     const observer = new IntersectionObserver(
-      ([entry]) => {
+      (entries: IntersectionObserverEntry[]) => {
+        const entry = entries[0]
+        if (!entry) return
         isPastHero.value = !entry.isIntersecting
       },
       {threshold: 0, rootMargin: '-500px 0px 0px 0px'}
