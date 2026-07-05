@@ -8,17 +8,17 @@ const { stats } = useStats();
 <template>
   <div class="about__description-container">
     <div>
-      <h2 class="h2">
+      <h2 class="h4 md:h2 !text-darkgray">
         Мы предлагаем качественные и надёжные вентиляционные изделия по доступным ценам
       </h2>
     </div>
     <div class="about__description-content">
       <div class="about__description-column">
-        <span class="text-big">Также мы гарантируем качественное исполнение заказов в самые минимальные сроки</span>
-        <span class="text-big">Если у вас имеются какие‑либо вопросы или пожелания, не стесняйтесь обращаться к нашим менеджерам</span>
+        <span class="text-big !text-darkgray">Также мы гарантируем качественное исполнение заказов в самые минимальные сроки</span>
+        <span class="text-big !text-darkgray">Если у вас имеются какие‑либо вопросы или пожелания, не стесняйтесь обращаться к нашим менеджерам</span>
       </div>
       <div>
-        <span class="text-big">Они предоставят вам необходимую помощь и проконсультируют по любым вопросам, связанным с вентиляционной техникой</span>
+        <span class="text-big !text-darkgray">Они предоставят вам необходимую помощь и проконсультируют по любым вопросам, связанным с вентиляционной техникой</span>
       </div>
     </div>
     <div>
