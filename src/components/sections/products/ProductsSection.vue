@@ -6,23 +6,21 @@ import ProductsList from "@/components/sections/products/ProductsList.vue";
 import { useProducts } from "@/composables/useProducts.ts";
 import BaseButton from "@/components/ui/BaseButton.vue";
 
-const { products } = useProducts();
+const {products} = useProducts();
 </script>
 
 <template>
-  <div class="px-16">
-    <div class="products__container">
-      <div class="products__header">
-        <SectionTitle>Наша <span class="text-orange">продукция</span></SectionTitle>
-        <SectionDescription>Мы предлагаем качественные и надежные вентиляционные изделия по доступным ценам
-        </SectionDescription>
-      </div>
+  <div class="products__container">
+    <div class="products__header">
+      <SectionTitle>Наша <span class="text-orange">продукция</span></SectionTitle>
+      <SectionDescription>Мы предлагаем качественные и надежные вентиляционные изделия по доступным ценам
+      </SectionDescription>
+    </div>
 
-      <ProductsList :products="products"/>
+    <ProductsList :products="products"/>
 
-      <div class="products__action">
-        <BaseButton variant="primary" size="lg">Посмотреть ещё</BaseButton>
-      </div>
+    <div class="products__action">
+      <BaseButton variant="primary" size="lg">Посмотреть ещё</BaseButton>
     </div>
   </div>
 </template>

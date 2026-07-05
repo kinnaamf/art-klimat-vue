@@ -11,7 +11,7 @@ defineProps<{
     <img
         :src="product.image"
         alt=""
-        class="h-[330px] w-[250px]">
+        class="product-card__image">
 
     <div class="product-card__content">
       <h6 class="product-card__title h6">{{ product.name }}</h6>
