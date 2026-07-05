@@ -58,7 +58,7 @@ onMounted(() => {
 
   <Transition name="slide-up">
     <BaseButton v-if="isPastHero && !contactVisible && !footerVisible && !isMenuOpen" @click="scrollTo('contact')"
-        variant="primary" size="lg" class="fixed bottom-12 right-6 drop-shadow-2xl z-[1000] !px-4 !py-3 md:!px-6 md:!py-[18px] md:hidden ">
+        variant="primary" size="lg" class="fixed bottom-12 right-6 drop-shadow-2xl z-[1000] !px-4 !py-3 md:!px-6 md:!py-[18px] xl:hidden ">
       Оставить заявку
     </BaseButton>
   </Transition>
