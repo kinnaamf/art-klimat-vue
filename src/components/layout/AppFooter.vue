@@ -22,13 +22,13 @@ const {
         </div>
         <div class="footer__info">
           <div class="footer__contacts">
-            <div class="flex justify-between gap-4">
-            <span>Telegram</span>
-            <span>WhatsApp</span>
-          </div>
-            <div class="flex justify-between gap-4">
-              <span>+7 967 533-67-77</span>
-              <span>info@ventzakaz.ru</span>
+            <div class="footer__contacts--item">
+              <h3 class="w-[8rem]">Telegram</h3>
+              <h3 class="w-[8rem]">WhatsApp</h3>
+            </div>
+            <div class="footer__contacts--item">
+              <h3>+7 967 533-67-77</h3>
+              <h3>info@ventzakaz.ru</h3>
             </div>
           </div>
           <div>

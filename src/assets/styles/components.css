@@ -108,7 +108,7 @@
 
     .footer__content {
         @apply flex flex-col justify-between gap-8
-        xl:flex-row xl:gap-12;
+        lg:flex-row xl:gap-12;
     }
 
     .footer__brand {
@@ -127,16 +127,21 @@
         @apply flex flex-col gap-3
     }
 
+    .footer__contacts--item {
+        @apply flex flex-row gap-8
+    }
+
     .footer__divider {
         @apply h-px bg-white/10 my-12;
     }
 
     .footer__bottom {
-        @apply flex xl:flex-row flex-col gap-4;
+        @apply flex md:flex-row flex-col gap-4;
     }
 
     .footer__navigation {
-        @apply flex flex-col gap-12 md:flex-row xl:gap-24;
+        @apply flex flex-col gap-12
+        md:flex-row md:justify-between xl:gap-24;
     }
 
     .footer-column {
