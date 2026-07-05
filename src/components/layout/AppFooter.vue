@@ -22,10 +22,14 @@ const {
         </div>
         <div class="footer__info">
           <div class="footer__contacts">
-            <span class="text-1-bold">Telegram</span>
-            <span class="text-1-bold">WhatsApp</span>
-            <span class="text-1-bold">+7 967 533-67-77</span>
-            <span class="text-1-bold">info@ventzakaz.ru</span>
+            <div class="flex justify-between gap-4">
+            <span>Telegram</span>
+            <span>WhatsApp</span>
+          </div>
+            <div class="flex justify-between gap-4">
+              <span>+7 967 533-67-77</span>
+              <span>info@ventzakaz.ru</span>
+            </div>
           </div>
           <div>
             <h5 class="text-2 text-white/60">Где мы находимся</h5>
@@ -45,9 +49,9 @@ const {
     </div>
     <div class="footer__divider"></div>
     <div class="footer__bottom">
-      <a href="" class="text-1 text-left !text-white/60 w-1/3">Политика конфиденциальности</a>
-      <span class="text-1 text-center !text-white/60 w-1/3">© 2026 «Арт-Климат». Все права защищены</span>
-      <span class="text-1 text-right !text-white/60 w-1/3">UX/UI дизайн от UxPRO</span>
+      <a href="" class="text-1 md:text-left !text-white/60 md:w-1/3">Политика конфиденциальности</a>
+      <span class="text-1 md:text-center !text-white/60 md:w-1/3">© 2026 «Арт-Климат». Все права защищены</span>
+      <span class="text-1 md:text-right !text-white/60 md:w-1/3">UX/UI дизайн от <a href="" class="text-white">UxPRO</a></span>
     </div>
   </div>
 </template>
