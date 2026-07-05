@@ -1,22 +1,19 @@
 <script setup lang="ts">
 import { type Feature, useSlider } from "@/composables/useSlider.ts";
 import FeatureItem from "@/components/sections/feature/FeatureItem.vue";
+import { useSliderDrag } from "@/composables/useSliderDrag.ts";
 
 defineProps<{
   featureData: Feature[]
 }>()
 
-const {
-  featuresRef,
-  startDragging,
-  drag,
-  stopDragging,
-} = useSlider()
+const { sliderRef, startDragging, drag, stopDragging } = useSliderDrag()
+
 </script>
 
 <template>
   <div
-      ref="featuresRef"
+      ref="sliderRef"
       @mousedown="startDragging"
       @mousemove="drag"
       @mouseup="stopDragging"

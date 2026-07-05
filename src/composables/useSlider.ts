@@ -58,35 +58,6 @@ export const useSlider = () => {
     },
     ]
 
-  const featuresRef = ref<HTMLElement | null>(null)
-
-  const isDown = ref(false)
-  const startX = ref(0)
-  const scrollLeft = ref(0)
-
-  const startDragging = (e: MouseEvent) => {
-    if (!featuresRef.value) return;
-    isDown.value = true
-
-    startX.value = e.pageX - featuresRef.value.offsetLeft
-
-    scrollLeft.value = featuresRef.value.scrollLeft
-  }
-
-  const drag = (e: MouseEvent) => {
-    if (!isDown.value || !featuresRef.value) return;
-    e.preventDefault()
-
-    const x = e.pageX - featuresRef.value.offsetLeft
-    const walk = (x - startX.value) * 1.5
-
-    featuresRef.value.scrollLeft = scrollLeft.value - walk
-  }
-
-  const stopDragging = () => {
-    isDown.value = false
-  }
-
   // PRODUCTION SECTION
 
   const slides = [
@@ -107,11 +78,10 @@ export const useSlider = () => {
     current.value = (current.value - 1 + slides.length) % slides.length
   }
 
+  // PRODUCTS SECTION
+
+
   return {
-    featuresRef,
-    startDragging,
-    drag,
-    stopDragging,
     featureData,
 
     slides,
