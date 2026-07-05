@@ -20,7 +20,9 @@ const {products} = useProducts();
     <ProductsList :products="products"/>
 
     <div class="products__action">
-      <BaseButton variant="primary" size="lg">Посмотреть ещё</BaseButton>
+      <BaseButton variant="primary" size="lg" class="!px-4 !py-3 md:!px-6 md:!py-[18px]">
+        Посмотреть всё
+      </BaseButton>
     </div>
   </div>
 </template>
