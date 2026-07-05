@@ -19,7 +19,7 @@ export const useStats = () => {
     },
     {
       title: 321,
-      description: 'Отзывов килентов'
+      description: 'Отзывов клиентов'
     },
   ]
 
