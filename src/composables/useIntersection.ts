@@ -1,4 +1,4 @@
-import { type Ref, onMounted, ref } from "vue";
+import { type Ref, onMounted, ref, watch } from "vue";
 
 export const useIntersection = (
   element: Ref<HTMLElement | null>,
@@ -6,19 +6,16 @@ export const useIntersection = (
 ) => {
   const isVisible = ref<boolean>(false);
 
-  onMounted(() => {
-    if (!element.value) return;
+  watch(element, (el) => {
+    if (!el) return;
 
     const observer = new IntersectionObserver(
       ([entry]: any) => {
-        if (entry.isIntersecting) {
-          isVisible.value = true;
-          observer.disconnect();
-        }
+        isVisible.value = entry.isIntersecting
       }, { threshold }
     )
 
-    observer.observe(element.value)
+    observer.observe(el)
   })
 
   return { isVisible };

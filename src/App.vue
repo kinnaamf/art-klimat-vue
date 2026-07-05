@@ -14,6 +14,12 @@ import ProductionSection from "@/components/sections/production/ProductionSectio
 
 import Section from "@/components/Section.vue";
 import PartnershipSection from "@/components/sections/partnership/PartnershipSection.vue";
+import BaseButton from "@/components/ui/BaseButton.vue";
+import { useHeader } from "@/composables/useHeader.ts";
+import { useScroll } from "@/composables/useScroll.ts";
+import { useIntersection } from "@/composables/useIntersection.ts";
+import { onMounted, ref } from 'vue'
+import { useMenu } from "@/composables/useMenu.ts";
 
 const sections = [
   { component: HeroSection, background: '#3e4041', spacing: 'hero', id: 'hero' },
@@ -26,12 +32,34 @@ const sections = [
   { component: AboutSection, spacing: 'lg', id: 'about' },
   { component: ContactSection, spacing: 'contact',  id: 'contact' },
 ]
+
+const { isPastHero } = useHeader()
+const { scrollTo } = useScroll()
+const { isMenuOpen } = useMenu();
+
+const contactRef = ref<HTMLElement | null>(null);
+const footerRef =  ref<HTMLElement | null>(null);
+
+const { isVisible: contactVisible } = useIntersection(contactRef);
+const { isVisible: footerVisible } = useIntersection(footerRef);
+
+onMounted(() => {
+  contactRef.value = document.getElementById('contact')
+  footerRef.value = document.getElementById('footer')
+})
 </script>
 
 <template>
   <header class="app-header">
     <AppHeader/>
   </header>
+
+  <Transition name="slide-up">
+    <BaseButton v-if="isPastHero && !contactVisible && !footerVisible && !isMenuOpen" @click="scrollTo('contact')"
+        variant="primary" size="lg" class="fixed bottom-12 right-6 drop-shadow-2xl z-[1000] !px-4 !py-3 md:!px-6 md:!py-[18px] md:hidden ">
+      Оставить заявку
+    </BaseButton>
+  </Transition>
 
   <Section v-for="(section, idx) in sections"
            :key="idx"
@@ -43,9 +71,20 @@ const sections = [
     <component :is="section.component"/>
   </Section>
 
-  <footer class="app-footer">
+  <footer class="app-footer" id="footer">
     <AppFooter/>
   </footer>
 </template>
 
-<style scoped></style>
+<style scoped>
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.slide-up-enter-from,
+.slide-up-leave-to {
+  transform: translateY(100px);
+  opacity: 0;
+}
+</style>

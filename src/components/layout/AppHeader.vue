@@ -2,13 +2,13 @@
 import IconTelegram from "@/components/icons/IconTelegram.vue";
 import IconWhatsApp from "@/components/icons/IconWhatsApp.vue";
 import BaseButton from "@/components/ui/BaseButton.vue";
-import { useHeader } from "@/composables/useHeader.ts";
 import IconMenu from "@/components/icons/IconMenu.vue";
-
-import { ref } from "vue";
 import AppNavbar from "@/components/AppNavbar.vue";
 import AppMenu from "@/components/AppMenu.vue";
+
 import { useScroll } from "@/composables/useScroll.ts";
+import { useMenu } from "@/composables/useMenu.ts";
+import { useHeader } from "@/composables/useHeader.ts";
 
 const {
   lightClass,
@@ -18,13 +18,10 @@ const {
 
 const { scrollTo } = useScroll();
 
-const isMenuOpen = ref<boolean>(false)
-
-const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value
-
-  document.body.style.overflow = isMenuOpen.value ? 'hidden' : '';
-}
+const {
+  isMenuOpen,
+  toggleMenu
+} = useMenu();
 </script>
 
 <template>
