@@ -1,9 +1,9 @@
 export const useFooter = () => {
   const services = [
-    { label: 'Проектирование', to: '/' },
-    { label: 'Производство', to: '/' },
-    { label: 'Монтаж', to: '/' },
-    { label: 'Пусконаладка', to: '/' },
+    { label: 'Проектирование', to: '' },
+    { label: 'Производство', to: '' },
+    { label: 'Монтаж', to: '' },
+    { label: 'Пусконаладка', to: '' },
   ]
 
   const products = [
@@ -15,10 +15,10 @@ export const useFooter = () => {
   ]
 
   const menu = [
-    { label: 'Производство', to: '/' },
-    { label: 'Объекты', to: '/' },
-    { label: 'О компании', to: '/' },
-    { label: 'Контакты', to: '/' },
+    { label: 'Производство', to: 'production' },
+    { label: 'Объекты', to: 'projects' },
+    { label: 'О компании', to: 'about' },
+    { label: 'Контакты', to: 'contact' },
   ]
 
   return {

@@ -1,8 +1,12 @@
 <script setup lang="ts">
+import { useScroll } from "@/composables/useScroll.ts";
+
 defineProps<{
   title: string
   links: { label: string; to: string }[]
 }>()
+
+const { scrollTo } = useScroll()
 </script>
 
 <template>
@@ -14,6 +18,7 @@ defineProps<{
           :key="link.label"
           :to="link.to"
           :href="link.label"
+          @click.prevent="scrollTo(link.to)"
           class="text-1 md:text-big footer-column__link"
       >
         {{ link.label }}
