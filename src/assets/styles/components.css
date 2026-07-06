@@ -520,21 +520,15 @@
   }
 
   .production-slider-mobile__container {
-    @apply w-full h-[220px] sm:h-[280px] overflow-x-auto scrollbar-none lg:hidden;
-    scroll-snap-type: x mandatory;
-  }
-
-  .production-slider-mobile__content {
-    @apply flex gap-4 h-full;
+    @apply w-full h-[220px] sm:h-[280px] lg:hidden;
   }
 
   .production-slider-mobile__slide {
-    @apply h-full shrink-0 w-full;
-    scroll-snap-align: start;
+    @apply h-full shrink-0 w-[85vw];
   }
 
   .production-slider-mobile__image {
-    @apply rounded-2xl w-full h-full object-cover object-center;
+    @apply w-full h-full object-cover object-center rounded-2xl;
   }
 
   /* PRODUCTS SECTION STYLES */

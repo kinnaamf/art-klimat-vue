@@ -4,6 +4,7 @@ import ProductionSlider from "@/components/sections/production/ProductionSlider.
 import { useSlider } from "@/composables/useSlider.ts";
 import { useIntersection } from "@/composables/useIntersection.ts";
 import { ref } from "vue";
+import ProductionSliderMobile from "@/components/sections/production/ProductionSliderMobile.vue";
 
 const { slides } = useSlider()
 
@@ -77,6 +78,7 @@ const { isVisible: textVisible } = useIntersection(trigger3);
         </div>
       </div>
     </div>
+    <ProductionSliderMobile :slides="slides"/>
   </div>
 
 </template>

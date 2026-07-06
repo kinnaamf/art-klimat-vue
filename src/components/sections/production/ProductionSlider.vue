@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { useSlider } from "@/composables/useSlider.ts";
 import IconChevron from "@/components/icons/IconChevron.vue";
-import { ref } from "vue";
-import { useSliderDrag } from "@/composables/useSliderDrag.ts";
 
 defineProps<{
   slides: { main: string; alt: string }[]
@@ -15,31 +13,11 @@ const {
   prev,
 } = useSlider()
 
-const { sliderRef: mobileSliderRef, startDragging, drag, stopDragging } = useSliderDrag()
 
 </script>
 
 <template>
   <div class="production-slider__track">
-    <!-- MOBILE -->
-    <div class="production-slider-mobile__container"
-         ref="mobileSliderRef"
-         @mousedown="startDragging"
-         @mousemove="drag"
-         @mouseup="stopDragging"
-         @mouseleave="stopDragging"
-    >
-      <div class="production-slider-mobile__content">
-        <div class="production-slider-mobile__slide"
-        v-for="(slide, index) in slides"
-        >
-          <img :src="slide.main" alt="" class="production-slider-mobile__image">
-        </div>
-        <div class="shrink-0 w-6"></div>
-      </div>
-    </div>
-    
-    <!-- DESKTOP -->
     <div class="production-slider">
       <div class="production-slider__main">
         <img
