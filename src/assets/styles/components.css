@@ -457,7 +457,7 @@
 
   .production__stats {
     @apply flex flex-col gap-6 justify-between
-    xl:flex-row xl:gap-16;
+    lg:flex-row lg:justify-center lg:gap-16 xl:justify-between;
   }
 
   .production__stat-item {

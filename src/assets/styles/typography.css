@@ -45,6 +45,9 @@
   }
 
   .stat-item-title {
-    @apply text-[4rem] md:text-[64px] leading-[64px] font-medium md:leading-[88px] text-orange;
+    @apply text-[4rem] leading-[64px] font-medium text-orange
+    md:text-[64px] md:leading-[88px]
+    lg:text-[80px]
+    xl:text-[3.5rem];
   }
 }
