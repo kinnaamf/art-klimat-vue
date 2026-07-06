@@ -66,7 +66,7 @@ export const useSlider = () => {
     { main: '/images/production-slider/slide-3.png', alt: 'Промышленная вентиляция' },
   ]
 
-  const current = ref(0)
+  const current = ref(1)
 
   const nextIndex = computed(() => (current.value + 1) % slides.length)
 
