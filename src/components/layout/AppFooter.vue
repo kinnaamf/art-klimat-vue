@@ -51,7 +51,14 @@ const {
     <div class="footer__bottom">
       <a href="" class="text-1 md:text-left !text-white/60 md:w-1/3">Политика конфиденциальности</a>
       <span class="text-1 md:text-center !text-white/60 md:w-1/3">© 2026 «Арт-Климат». Все права защищены</span>
-      <span class="text-1 md:text-right !text-white/60 md:w-1/3">UX/UI дизайн от <a href="" class="text-white">UxPRO</a></span>
+      <span class="text-1 md:text-right !text-white/60 md:w-1/3">UX/UI дизайн от
+        <a
+            href="https://uxpro.ru/"
+            target="_blank"
+            class="text-white">
+          UxPRO
+        </a>
+      </span>
     </div>
   </div>
 </template>
