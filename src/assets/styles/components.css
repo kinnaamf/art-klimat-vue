@@ -4,8 +4,8 @@
 
   /* HEADER */
   .app-header {
-    @apply fixed top-6 inset-x-6 z-[100]
-    xl:left-1/2 xl:right-auto xl:-translate-x-1/2;
+    @apply fixed top-6 left-6 right-6 z-[100]
+    xl:left-1/2 xl:right-auto xl:-translate-x-1/2 xl:w-max;
   }
 
   .header__container {
