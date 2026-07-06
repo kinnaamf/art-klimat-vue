@@ -289,7 +289,7 @@
   }
 
   .hero-actions button {
-    @apply w-full xl:w-max
+    @apply w-full lg:w-max
   }
 
   /* FEATURE SECTION STYLES */
