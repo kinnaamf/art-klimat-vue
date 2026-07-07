@@ -22,7 +22,7 @@ const { isVisible: textVisible } = useIntersection(trigger3);
   <div>
     <div class="px-6 xl:px-16">
       <div class="production__container">
-        <div class="flex items-center gap-2.5 h-7 shrink-0 w-[420px]">
+        <div class="flex items-center gap-2.5 h-7 shrink-0 lg:w-[420px]">
           <div class="production__label-dot"></div>
           <span class="text-big text-darkgray/50">О компании</span>
         </div>
