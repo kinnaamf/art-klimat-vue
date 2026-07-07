@@ -17,7 +17,7 @@ import AppForm from "@/components/AppForm.vue";
           </p>
         </div>
         <div>
-          <AppForm :showHeader="false" theme="light" />
+          <AppForm :showHeader="false" theme="light"  height="176px"/>
         </div>
       </div>
     </div>

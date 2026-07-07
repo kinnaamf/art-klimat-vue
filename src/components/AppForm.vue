@@ -8,11 +8,13 @@ const props = withDefaults(defineProps<{
   title: string
   description?: string
   theme?: "dark" | "light" | null
+  height?: string
 }>(), {
   showHeader: true,
   title: "Оставьте заявку",
   description: "Заполните форму, и наши специалисты свяжутся с вами в ближайшее время",
   theme: "dark",
+  height: "120px",
 });
 
 const emit = defineEmits<{
@@ -99,6 +101,7 @@ const handleSubmit = () => {
             :class="theme === 'dark'
             ? 'app-form__textarea--dark'
             : 'app-form__textarea--light'"
+            :style="{ height: props.height }"
         />
       </div>
 
