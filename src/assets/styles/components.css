@@ -520,7 +520,8 @@
   }
 
   .production-slider-mobile__container {
-    @apply w-full h-[220px] sm:h-[280px] lg:hidden;
+    @apply w-full h-[220px] overflow-x-hidden
+    sm:h-[280px] lg:hidden;
   }
 
   .production-slider-mobile__slide {
