@@ -294,7 +294,7 @@
 
   /* FEATURE SECTION STYLES */
   .features__container {
-    @apply max-w-[1440px] mx-auto px-6
+    @apply max-w-[1440px] mx-auto pl-6
     xl:px-16;
   }
 

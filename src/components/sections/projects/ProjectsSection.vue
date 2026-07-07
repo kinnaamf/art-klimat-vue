@@ -10,7 +10,7 @@ const { projects } = useProjects();
 </script>
 
 <template>
-  <div class="px-6 xl:px-16">
+  <div class="pl-6 xl:px-16">
     <div class="projects__container">
       <div class="projects__header">
         <SectionTitle>Реализованные <span class="text-orange">объекты</span></SectionTitle>
