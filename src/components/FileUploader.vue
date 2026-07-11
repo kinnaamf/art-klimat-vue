@@ -1,6 +1,6 @@
 <template>
-  <input type="file" id="file" class="sr-only" @change="handleFile"/>
-  <label for="file"
+  <input type="file" :id="inputId" class="sr-only" @change="handleFile"/>
+  <label :for="inputId"
          class="rounded-2xl flex items-center gap-2 cursor-pointer max-w-[240px] px-4 py-3"
          :class="theme === 'dark'
                               ? 'secondary'
@@ -14,12 +14,14 @@
 <script setup lang="ts">
 
 import IconPaperclip from "@/components/icons/IconPaperclip.vue";
-
+import { useId } from "vue"
 import { useFile } from "@/composables/useFile.ts";
 
 const props = defineProps<{
   theme: string;
 }>()
+
+const inputId = useId();
 
 const {
   file,
