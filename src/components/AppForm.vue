@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { reactive, ref, useId } from "vue";
+import { vMaska } from 'maska/vue'
+
 import IconCheck from "@/components/icons/IconCheck.vue";
 import BaseButton from "@/components/ui/BaseButton.vue";
 import FileUploader from "@/components/FileUploader.vue";
+
 import { useFile } from "@/composables/useFile.ts";
-import { vMaska } from 'maska/vue'
 
 const props = withDefaults(defineProps<{
   showHeader?: boolean
@@ -42,12 +44,8 @@ const handleSubmit = () => {
     return;
   }
 
-  if (error.value) {
-
-  }
-
   showConsentError.value = false;
-  emit("submit", { ...formFields });
+  emit("submit", {...formFields});
 };
 </script>
 
@@ -131,7 +129,7 @@ const handleSubmit = () => {
               class="app-form__checkbox"
               :class="isChecked ? 'app-form__checkbox--checked' : 'border border-darkgray/10'"
           >
-            <IconCheck v-if="isChecked" />
+            <IconCheck v-if="isChecked"/>
           </div>
 
           <span
@@ -141,27 +139,17 @@ const handleSubmit = () => {
               : 'text-darkgray'"
           >
             Я ознакомлен(а) с
-            <a
-                href="#"
-                class="app-form__link"
-            >
+            <a href="#" class="app-form__link">
               Политикой конфиденциальности
             </a>
-            и даю согласие <br>
-            на обработку
-            <a
-                href="#"
-                class="app-form__link"
-            >
+            и даю согласие на обработку
+            <a href="#" class="app-form__link">
               персональных данных
             </a>
           </span>
         </label>
 
-        <p
-            v-if="showConsentError"
-            class="app-form__error"
-        >
+        <p v-if="showConsentError" class="app-form__error">
           Необходимо согласие на обработку персональных данных
         </p>
       </div>
@@ -175,7 +163,7 @@ const handleSubmit = () => {
         >
           Оставить заявку
         </BaseButton>
-        <FileUploader :theme="props.theme" />
+        <FileUploader :theme="props.theme"/>
       </div>
       <Transition name="expand">
         <p v-if="error" class="app-form__error">{{ error }}</p>
@@ -203,4 +191,3 @@ const handleSubmit = () => {
   max-height: 50px;
 }
 </style>
-
