@@ -4,6 +4,7 @@ import IconCheck from "@/components/icons/IconCheck.vue";
 import BaseButton from "@/components/ui/BaseButton.vue";
 import FileUploader from "@/components/FileUploader.vue";
 import { useFile } from "@/composables/useFile.ts";
+import { vMaska } from 'maska/vue'
 
 const props = withDefaults(defineProps<{
   showHeader?: boolean
@@ -90,6 +91,7 @@ const handleSubmit = () => {
 
           <input
               v-model="formFields.phoneNumber"
+              v-maska="'+7 (###) ### ## ##'"
               type="tel"
               name="phoneNumber"
               placeholder="Номер телефона"
