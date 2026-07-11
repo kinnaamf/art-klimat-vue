@@ -16,7 +16,6 @@ const { scrollTo } = useScroll()
     <nav class="footer-column__nav">
       <a  v-for="link in links"
           :key="link.label"
-          :to="link.to"
           :href="link.label"
           @click.prevent="scrollTo(link.to)"
           class="text-1 md:text-big footer-column__link"
