@@ -2,6 +2,8 @@
 import { reactive, ref, useId } from "vue";
 import IconCheck from "@/components/icons/IconCheck.vue";
 import BaseButton from "@/components/ui/BaseButton.vue";
+import FileUploader from "@/components/FileUploader.vue";
+import { useFile } from "@/composables/useFile.ts";
 
 const props = withDefaults(defineProps<{
   showHeader?: boolean
@@ -16,6 +18,8 @@ const props = withDefaults(defineProps<{
   theme: "dark",
   height: "120px",
 });
+
+const { error } = useFile()
 
 const emit = defineEmits<{
   submit: [payload: { name: string; phoneNumber: string; comment: string }]
@@ -35,6 +39,10 @@ const handleSubmit = () => {
   if (!isChecked.value) {
     showConsentError.value = true;
     return;
+  }
+
+  if (error.value) {
+
   }
 
   showConsentError.value = false;
@@ -75,8 +83,8 @@ const handleSubmit = () => {
               placeholder="Имя"
               class="app-form__input text-big"
               :class="theme === 'dark'
-              ? 'app-form__input--dark'
-              : 'app-form__input--light'"
+              ? 'app-form__input--dark !text-white'
+              : 'app-form__input--light !text-darkgray'"
               required
           />
 
@@ -87,8 +95,8 @@ const handleSubmit = () => {
               placeholder="Номер телефона"
               class="app-form__input text-big"
               :class="theme === 'dark'
-              ? 'app-form__input--dark'
-              : 'app-form__input--light'"
+              ? 'app-form__input--dark !text-white'
+              : 'app-form__input--light !text-darkgray'"
               required
           />
         </div>
@@ -99,8 +107,8 @@ const handleSubmit = () => {
             placeholder="Комментарий"
             class="app-form__textarea text-big"
             :class="theme === 'dark'
-            ? 'app-form__textarea--dark'
-            : 'app-form__textarea--light'"
+            ? 'app-form__textarea--dark !text-white'
+            : 'app-form__textarea--light !text-darkgray'"
             :style="{ height: props.height }"
         />
       </div>
@@ -156,19 +164,41 @@ const handleSubmit = () => {
         </p>
       </div>
 
-      <BaseButton
-          type="submit"
-          variant="primary"
-          size="lg"
-          class="app-form__submit"
-      >
-        Оставить заявку
-      </BaseButton>
+      <div class="flex flex-col gap-2 sm:flex-row sm:gap-4">
+        <BaseButton
+            type="submit"
+            variant="primary"
+            size="lg"
+            class="app-form__submit"
+        >
+          Оставить заявку
+        </BaseButton>
+        <FileUploader :theme="props.theme" />
+      </div>
+      <Transition name="expand">
+        <p v-if="error" class="app-form__error">{{ error }}</p>
+      </Transition>
     </form>
   </div>
 </template>
 
 <style scoped lang="postcss">
+.expand-enter-active,
+.expand-leave-active {
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
 
+.expand-enter-from,
+.expand-leave-to {
+  opacity: 0;
+  max-height: 0;
+}
+
+.expand-enter-to,
+.expand-leave-from {
+  opacity: 1;
+  max-height: 50px;
+}
 </style>
 
