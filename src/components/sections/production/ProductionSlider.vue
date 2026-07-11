@@ -22,8 +22,8 @@ const {
       <div class="production-slider__main">
         <img
             :key="current"
-            :src="slides[current].main"
-            :alt="slides[current].alt"
+            :src="slides[current]?.main"
+            :alt="slides[current]?.alt"
             class="production-slider__image"
         >
 
@@ -42,8 +42,8 @@ const {
       </div>
 
       <img
-          :src="slides[nextIndex].main"
-          :alt="slides[nextIndex].alt"
+          :src="slides[nextIndex]?.main"
+          :alt="slides[nextIndex]?.alt"
           class="production-slider__thumbnail"
       >
     </div>
