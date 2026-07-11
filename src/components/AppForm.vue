@@ -13,7 +13,7 @@ const props = withDefaults(defineProps<{
   showHeader?: boolean
   title: string
   description?: string
-  theme?: "dark" | "light" | null
+  theme?: "dark" | "light"
   height?: string
 }>(), {
   showHeader: true,

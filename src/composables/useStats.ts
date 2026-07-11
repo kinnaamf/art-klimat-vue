@@ -1,10 +1,10 @@
 export interface Stat {
-  title: string
+  title: number
   description: string
 }
 
 export const useStats = () => {
-  const stats = [
+  const stats: Stat[] = [
     {
       title: 20,
       description: 'Лет на рынке'

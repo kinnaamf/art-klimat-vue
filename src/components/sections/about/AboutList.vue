@@ -3,7 +3,7 @@ import type { Stat } from "@/composables/useStats.ts";
 import AboutItem from "@/components/sections/about/AboutItem.vue";
 
 defineProps<{
-  stats: Stat
+  stats: Stat[]
 }>()
 </script>
 
