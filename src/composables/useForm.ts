@@ -1,8 +1,6 @@
-import { useFile } from "@/composables/useFile.ts";
-import { reactive, ref } from "vue";
+import { reactive, type Ref, ref } from "vue";
 
-export const useForm = () => {
-  const { file } = useFile()
+export const useForm = (file: Ref<File | null>) => {
 
   const formFields = reactive({
     name: '',

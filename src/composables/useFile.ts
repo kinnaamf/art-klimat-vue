@@ -11,10 +11,11 @@ const ALLOWED_TYPES = [
 
 const MAX_SIZE = 2.5 * 1024 * 1024;
 
-const file = ref<File | null>(null)
 const error = ref<string | null>(null)
 
 export const useFile = () => {
+
+  const file = ref<File | null>(null)
 
   const validateExtension = (selected: File) => {
     if (!ALLOWED_TYPES.includes(selected.type)) {
