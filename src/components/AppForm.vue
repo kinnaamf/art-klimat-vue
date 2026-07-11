@@ -129,7 +129,7 @@ const handleSubmit = () => {
 
           <div
               class="app-form__checkbox"
-              :class="{ 'app-form__checkbox--checked': isChecked }"
+              :class="isChecked ? 'app-form__checkbox--checked' : 'border border-darkgray/10'"
           >
             <IconCheck v-if="isChecked" />
           </div>
