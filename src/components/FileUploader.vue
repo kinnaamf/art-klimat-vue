@@ -1,7 +1,7 @@
 <template>
   <input type="file" :id="inputId" class="sr-only" @change="handleFile"/>
   <label :for="inputId"
-         class="rounded-2xl flex items-center gap-2 cursor-pointer max-w-[240px] px-4 py-3"
+         class="app-form__file-input"
          :class="theme === 'dark'
                               ? 'secondary'
                               : 'text-darkgray border border-gray-300'">

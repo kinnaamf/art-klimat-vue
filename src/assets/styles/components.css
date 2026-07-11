@@ -226,6 +226,11 @@
     @apply text-darkgray/50;
   }
 
+  .app-form__file-input {
+    @apply rounded-2xl flex justify-center items-center gap-2 cursor-pointer h-[60px] px-4 py-3
+    sm:justify-normal sm:max-w-[240px]
+  }
+
   .app-form__consent {
     @apply flex cursor-pointer items-start gap-4;
   }
