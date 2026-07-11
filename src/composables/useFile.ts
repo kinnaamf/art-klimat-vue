@@ -24,7 +24,7 @@ export const useFile = () => {
     return true
   }
 
-  const handleFile = (event) => {
+  const handleFile = (event: any) => {
     const input = event.target as HTMLInputElement;
     const selected = input.files?.[0]
 

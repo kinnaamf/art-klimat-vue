@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { reactive, ref, useId } from "vue";
+import { useId } from "vue";
 import { vMaska } from 'maska/vue'
 
 import IconCheck from "@/components/icons/IconCheck.vue";
@@ -7,6 +7,7 @@ import BaseButton from "@/components/ui/BaseButton.vue";
 import FileUploader from "@/components/FileUploader.vue";
 
 import { useFile } from "@/composables/useFile.ts";
+import { useForm } from "@/composables/useForm.ts";
 
 const props = withDefaults(defineProps<{
   showHeader?: boolean
@@ -22,31 +23,19 @@ const props = withDefaults(defineProps<{
   height: "120px",
 });
 
-const { error } = useFile()
+const checkboxId = useId()
 
-const emit = defineEmits<{
-  submit: [payload: { name: string; phoneNumber: string; comment: string }]
-}>();
+const { error: fileError } = useFile()
 
-const formFields = reactive({
-  name: "",
-  phoneNumber: "",
-  comment: "",
-});
-
-const isChecked = ref(false);
-const showConsentError = ref(false);
-const checkboxId = useId();
-
-const handleSubmit = () => {
-  if (!isChecked.value) {
-    showConsentError.value = true;
-    return;
-  }
-
-  showConsentError.value = false;
-  emit("submit", {...formFields});
-};
+const {
+  formFields,
+  isChecked,
+  showConsentError,
+  isLoading,
+  submitError,
+  submitSuccess,
+  handleSubmit,
+} = useForm()
 </script>
 
 <template>
@@ -159,14 +148,21 @@ const handleSubmit = () => {
             type="submit"
             variant="primary"
             size="lg"
-            class="app-form__submit"
-        >
+            class="app-form__submit">
           Оставить заявку
         </BaseButton>
         <FileUploader :theme="props.theme"/>
       </div>
       <Transition name="expand">
-        <p v-if="error" class="app-form__error">{{ error }}</p>
+        <p v-if="submitError" class="app-form__error">{{ submitError }}</p>
+      </Transition>
+
+      <Transition name="expand">
+        <p v-if="fileError" class="app-form__error">{{ fileError }}</p>
+      </Transition>
+
+      <Transition name="expand">
+        <p v-if="submitSuccess" class="text-green-500 text-sm">Заявка успешно отправлена!</p>
       </Transition>
     </form>
   </div>
