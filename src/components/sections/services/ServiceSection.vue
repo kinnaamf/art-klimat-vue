@@ -26,7 +26,7 @@ const rowTwo = [
     <div class="services__grid mt-8 md:mt-12">
       <ServiceRow :cards="rowOne" class="services__row--top"/>
       <ServiceRow :cards="rowTwo" class="services__row--bottom"/>
-      <AppForm />
+      <AppForm title="Оставьте заявку" theme="dark"/>
       <ServiceContacts />
     </div>
 
