@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { type Feature, useSlider } from "@/composables/useSlider.ts";
+import { type Feature } from "@/composables/useSlider.ts";
 import FeatureItem from "@/components/sections/feature/FeatureItem.vue";
 import { useSliderDrag } from "@/composables/useSliderDrag.ts";
 

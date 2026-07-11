@@ -1,4 +1,4 @@
-import { type Ref, onMounted, ref, watch } from "vue";
+import { type Ref, ref, watch } from "vue";
 
 export const useIntersection = (
   element: Ref<HTMLElement | null>,

@@ -3,7 +3,6 @@
 import SectionTitle from "@/components/SectionTitle.vue";
 import AppForm from "@/components/AppForm.vue";
 import ServiceContacts from "@/components/sections/services/ServiceContacts.vue";
-import ServiceCard from "@/components/sections/services/ServiceCard.vue";
 import ServiceRow from "@/components/sections/services/ServiceRow.vue";
 
 const rowOne = [

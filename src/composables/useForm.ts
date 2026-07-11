@@ -41,7 +41,10 @@ export const useForm = (file: Ref<File | null>) => {
         body: formData
       })
 
-      if (!response.ok) throw new Error('Ошибка отправки')
+      if (!response.ok) {
+        submitError.value = 'Не удалось отправить заявку. Попробуйте позже'
+        return
+      }
 
       submitSuccess.value = true
 

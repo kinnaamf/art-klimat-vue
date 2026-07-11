@@ -25,7 +25,7 @@ const props = withDefaults(defineProps<{
 
 const checkboxId = useId()
 
-const { error: fileError } = useFile()
+const { file, error: fileError } = useFile()
 
 const {
   formFields,
@@ -34,7 +34,7 @@ const {
   submitError,
   submitSuccess,
   handleSubmit,
-} = useForm()
+} = useForm(file)
 </script>
 
 <template>
