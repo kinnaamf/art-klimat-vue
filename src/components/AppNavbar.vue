@@ -30,10 +30,6 @@ const {
 } = useHeader()
 
 const { scrollTo } = useScroll()
-
-const emits = defineEmits<{
-  linkClick: []
-}>()
 </script>
 
 <style scoped lang="postcss">

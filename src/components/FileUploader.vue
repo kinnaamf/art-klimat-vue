@@ -17,7 +17,7 @@ import IconPaperclip from "@/components/icons/IconPaperclip.vue";
 import { useId } from "vue"
 import { useFile } from "@/composables/useFile.ts";
 
-const props = defineProps<{
+defineProps<{
   theme: string;
 }>()
 

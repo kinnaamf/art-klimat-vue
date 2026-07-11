@@ -29,10 +29,6 @@ import IconClose from "@/components/icons/IconClose.vue";
 import BaseButton from "@/components/ui/BaseButton.vue";
 import { useScroll } from "@/composables/useScroll.ts";
 
-const emits = defineEmits<{
-  closeMenu: []
-}>()
-
 const { scrollTo } = useScroll()
 </script>
 

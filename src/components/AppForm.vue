@@ -31,7 +31,6 @@ const {
   formFields,
   isChecked,
   showConsentError,
-  isLoading,
   submitError,
   submitSuccess,
   handleSubmit,
