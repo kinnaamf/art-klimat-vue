@@ -36,7 +36,7 @@ export const useForm = (file: Ref<File | null>) => {
     }
 
     try {
-      const response = await fetch('http://127.0.0.1:8080/api/public/leads', {
+      const response = await fetch('/api/public/leads', {
         method: 'POST',
         body: formData
       })
@@ -58,6 +58,7 @@ export const useForm = (file: Ref<File | null>) => {
 
       isChecked.value = false
     } catch (e) {
+      submitError.value = 'Не удалось отправить заявку. Попробуйте позже'
       console.error(e)
     } finally {
       isLoading.value = false
