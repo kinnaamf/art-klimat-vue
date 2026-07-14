@@ -1,5 +1,5 @@
 <template>
-  <input type="file" :id="inputId" class="sr-only" @change="handleFile"/>
+  <input type="file" :id="inputId" class="sr-only" @change="emit('change', $event)"/>
   <label :for="inputId"
          class="app-form__file-input"
          :class="theme === 'dark'
@@ -7,7 +7,7 @@
                               : 'text-darkgray border border-gray-300'">
     <IconPaperclip :class="theme === 'dark' ? 'stroke-white' : 'stroke-darkgray'"/>
     <span>{{ file ? file.name : 'Прикрепить файл' }}</span>
-    <button v-if="file" @click.stop.prevent="clearFile">✕</button>
+    <button v-if="file" @click.stop.prevent="emit('clear')">✕</button>
   </label>
 </template>
 
@@ -19,14 +19,15 @@ import { useFile } from "@/composables/useFile.ts";
 
 defineProps<{
   theme: string;
+  file: File | null;
 }>()
+
+const emit = defineEmits(['change', 'clear'])
 
 const inputId = useId();
 
 const {
-  file,
-  handleFile,
-  clearFile
+  file
 } = useFile()
 </script>
 

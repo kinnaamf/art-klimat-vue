@@ -25,7 +25,7 @@ const props = withDefaults(defineProps<{
 
 const checkboxId = useId()
 
-const { file, error: fileError } = useFile()
+const { file, error: fileError, handleFile, clearFile } = useFile()
 
 const {
   formFields,
@@ -150,7 +150,7 @@ const {
             class="app-form__submit">
           Оставить заявку
         </BaseButton>
-        <FileUploader :theme="props.theme"/>
+        <FileUploader :theme="props.theme" :file="file" @change="handleFile" @clear="clearFile"/>
       </div>
       <Transition name="expand">
         <p v-if="submitError" class="app-form__error">{{ submitError }}</p>

@@ -64,7 +64,7 @@ export const useForm = (file: Ref<File | null>) => {
       isLoading.value = false
     }
   }
-  
+
   return {
     formFields,
     isChecked,

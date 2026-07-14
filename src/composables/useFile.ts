@@ -12,11 +12,9 @@ const ALLOWED_TYPES = [
 const MAX_SIZE = 2.5 * 1024 * 1024;
 
 const error = ref<string | null>(null)
+const file = ref<File | null>(null)
 
 export const useFile = () => {
-
-  const file = ref<File | null>(null)
-
   const validateExtension = (selected: File) => {
     if (!ALLOWED_TYPES.includes(selected.type)) {
       error.value = 'Допустимые форматы: PDF, DOC, DOCX, XLS, XLSX, TXT'
