@@ -11,7 +11,7 @@
       </div>
       <div class="hero-actions">
         <BaseButton variant="primary" size="lg" @click="scrollTo('contact')">Оставить заявку</BaseButton>
-        <BaseButton variant="secondary" size="lg">Наши услуги</BaseButton>
+        <BaseButton variant="secondary" size="lg" @click="scrollTo('service')">Наши услуги</BaseButton>
       </div>
     </div>
   </div>
