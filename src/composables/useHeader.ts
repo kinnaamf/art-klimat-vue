@@ -11,18 +11,18 @@ export const  useHeader = () => {
     },
     {
       id: 2,
-      title: 'Продукция',
-      to: 'products'
-    },
-    {
-      id: 3,
       title: 'Услуги',
       to: 'service'
     },
     {
-      id: 4,
+      id: 3,
       title: 'Производство',
       to: 'production'
+    },
+    {
+      id: 4,
+      title: 'Продукция',
+      to: 'products'
     },
     {
       id: 5,
