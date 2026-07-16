@@ -47,7 +47,7 @@
   }
 
   .active {
-    @apply !text-white;
+    @apply !text-white transition-all duration-300;
   }
 
   .header__actions {

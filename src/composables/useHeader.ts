@@ -4,41 +4,13 @@ const activeLink = ref(1)
 
 export const  useHeader = () => {
   const links = [
-    {
-      id: 1,
-      title: 'Главная',
-      to: 'hero'
-    },
-    {
-      id: 2,
-      title: 'Услуги',
-      to: 'service'
-    },
-    {
-      id: 3,
-      title: 'Производство',
-      to: 'production'
-    },
-    {
-      id: 4,
-      title: 'Продукция',
-      to: 'products'
-    },
-    {
-      id: 5,
-      title: 'Объекты',
-      to: 'projects'
-    },
-    {
-      id: 6,
-      title: 'О компании',
-      to: 'about'
-    },
-    {
-      id: 7,
-      title: 'Контакты',
-      to: 'contact'
-    },
+    { id: 1, title: 'Главная', to: 'hero' },
+    { id: 2, title: 'Услуги', to: 'service' },
+    { id: 3, title: 'Производство', to: 'production' },
+    { id: 4, title: 'Продукция', to: 'products' },
+    { id: 5, title: 'Объекты', to: 'projects' },
+    { id: 6, title: 'О компании', to: 'about' },
+    { id: 7, title: 'Контакты', to: 'contact' },
   ]
 
   const lightClass = computed(() => {
@@ -65,6 +37,26 @@ export const  useHeader = () => {
       {threshold: 0, rootMargin: '-500px 0px 0px 0px'}
     )
     observer.observe(hero);
+
+    const sectionIds = ['hero', 'service', 'production', 'products', 'projects', 'about',  'contact']
+
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id
+            const link = links.find(l => l.to === id)
+            if (link) activeLink.value = link.id
+          }
+        })
+      },
+      { threshold: 0.3 }
+    )
+
+    sectionIds.forEach(id => {
+      const el = document.getElementById(id)
+      if (el) sectionObserver.observe(el)
+    })
   })
 
   return {
