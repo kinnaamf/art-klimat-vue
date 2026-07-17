@@ -555,7 +555,9 @@
   .products__list {
     @apply flex gap-4 mt-12 cursor-grab overflow-x-auto scrollbar-none pr-6 select-none active:cursor-grabbing
     xl:pr-0
-    2xl:overflow-x-hidden 2xl:cursor-pointer 2xl:active:cursor-pointer;
+    2xl:overflow-x-hidden
+    2xl:cursor-pointer
+    2xl:active:cursor-pointer;
   }
 
   .product-card {

@@ -8,7 +8,11 @@ export const useSliderDrag = () => {
   const scrollLeft = ref(0)
 
   const startDragging = (e: MouseEvent) => {
-    if (!sliderRef.value) return;
+    if (!sliderRef.value || !isDown.value) return
+    if (window.innerWidth < 1536) return
+
+    e.preventDefault()
+
     isDown.value = true
 
     startX.value = e.pageX - sliderRef.value.offsetLeft
