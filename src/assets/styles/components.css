@@ -669,7 +669,7 @@
 
   /* PROJECT SECTION STYLES */
   .projects__container {
-    @apply pt-20 border-t border-darkgray/10 space-y-12;
+    @apply pt-20 border-t border-darkgray/10 space-y-12 max-w-[1440px] mx-auto;
   }
 
   .projects__header {
