@@ -34,7 +34,8 @@
   }
 
   .header__menu-item {
-    @apply !text-white/70 text-nowrap cursor-pointer;
+    @apply !text-white/70 text-nowrap cursor-pointer transition-all duration-200
+    hover:!text-white/90;
   }
 
   .header__search {
@@ -153,7 +154,7 @@
   }
 
   .footer-column__link {
-    @apply !text-white/60;
+    @apply !text-white/60 hover:!text-white/90 transition-all duration-300;
   }
 
   /* APP FORM STYLES */
