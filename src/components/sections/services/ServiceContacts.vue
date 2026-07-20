@@ -9,12 +9,12 @@
 
         <div class="service-contacts__content h6">
         <div class="service-contacts__row">
-          <span>+7 967 533-67-77</span>
-          <span>Telegram</span>
+          <a href="tel:+79675336777">+7 967 533-67-77</a>
+          <a href="https://t.me/+79675336777">Telegram</a>
         </div>
         <div class="service-contacts__row">
-          <span>info@ventzakaz.ru</span>
-          <span>WhatsApp</span>
+          <a href="mailto:info@ventzakaz.ru">info@ventzakaz.ru</a>
+          <a href="https://wa.me/79675336777">WhatsApp</a>
         </div>
       </div>
     </div>
