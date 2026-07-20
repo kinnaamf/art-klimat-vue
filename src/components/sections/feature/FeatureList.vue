@@ -20,9 +20,9 @@ const { sliderRef, startDragging, drag, stopDragging } = useSliderDrag()
       @mouseleave="stopDragging"
       class="features__list"
   >
-    <div v-for="feature in featureData">
-      <FeatureItem :feature="feature"/>
-    </div>
+    <FeatureItem
+        v-for="feature in featureData"
+        :feature="feature"/>
   </div>
 </template>
 

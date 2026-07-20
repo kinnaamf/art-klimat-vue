@@ -13,8 +13,8 @@ const { featureData } = useSlider();
       <SectionTitle>
         Наши <span class="text-orange">преимущества</span>
       </SectionTitle>
-      <FeatureList :featureData="featureData"/>
 
+      <FeatureList :featureData="featureData"/>
     </div>
   </div>
 </template>

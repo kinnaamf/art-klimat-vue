@@ -305,7 +305,7 @@
 
   .features__list {
     @apply flex gap-4 mt-12 cursor-grab overflow-x-auto overflow-y-hidden scrollbar-none select-none active:cursor-grabbing pr-6
-    xl:pr-16
+    xl:pr-0
   }
 
   .feature-card {
@@ -555,9 +555,7 @@
   .products__list {
     @apply flex gap-4 mt-12 cursor-grab overflow-x-auto scrollbar-none pr-6 select-none active:cursor-grabbing
     xl:pr-0
-    2xl:overflow-x-hidden
-    2xl:cursor-pointer
-    2xl:active:cursor-pointer;
+    2xl:grid 2xl:grid-cols-5 2xl:overflow-visible 2xl:cursor-default 2xl:active:cursor-default;
   }
 
   .product-card {
