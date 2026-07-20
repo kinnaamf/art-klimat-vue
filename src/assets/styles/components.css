@@ -275,7 +275,7 @@
   /* HERO SECTION STYLES */
   .hero {
     @apply relative w-full h-dvh bg-cover bg-center bg-no-repeat text-white;
-    background-image: url("/images/Hero.png");
+    background-image: url("/images/Hero.webp");
   }
 
   .hero-content {
@@ -391,7 +391,7 @@
 
   .img-production {
     @apply absolute inset-0 w-full h-full bg-no-repeat;
-    background-image: url('/images/production.png');
+    background-image: url('/images/production.webp');
     background-size: 95%;
     background-position: right 35%;
   }

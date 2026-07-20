@@ -17,7 +17,7 @@ const {
     <div class="footer__content">
       <div>
         <div class="footer__brand">
-          <img src="/images/logo.png" alt="" class="w-14 h-14">
+          <img src="/images/logo.webp" alt="" class="w-14 h-14">
           <h3 class="">Арт-Климат</h3>
         </div>
         <div class="footer__info">

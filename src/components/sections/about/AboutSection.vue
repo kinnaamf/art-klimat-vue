@@ -6,8 +6,8 @@ import AboutDescription from "@/components/sections/about/AboutDescription.vue";
 <template>
   <div class="about__container">
     <div class="about__gallery">
-      <img src="/images/production-slider/slide-1.png" alt="" class="about__image about__image-primary">
-      <img src="/images/production-slider/slide-2.png" alt="" class="about__image about__image-secondary">
+      <img src="/images/production-slider/slide-1.webp" alt="" class="about__image about__image-primary">
+      <img src="/images/production-slider/slide-2.webp" alt="" class="about__image about__image-secondary">
     </div>
 
     <AboutDescription/>

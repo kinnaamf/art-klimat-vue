@@ -31,7 +31,7 @@ const {
         :class="isPastHero ? darkClass : lightClass"
     >
       <a href="/">
-        <img src="/images/logo.png" alt="" class="header__logo">
+        <img src="/images/logo.webp" alt="" class="header__logo">
       </a>
 
       <AppNavbar/>
