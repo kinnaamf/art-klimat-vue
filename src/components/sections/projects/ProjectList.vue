@@ -32,7 +32,11 @@ const { sliderRef, startDragging, drag, stopDragging } = useSliderDrag()
 
   <div class="project-list-mobile__container">
     <div class="project-list-mobile__content">
-      <div v-for="project in projects" :key="project.id">
+      <div
+          v-for="(project, idx) in projects"
+          :key="idx"
+          :class="{ 'pr-6': idx === projects.length - 1 }"
+      >
         <ProjectItem :project="project" imageClass="h-[240px] w-[320px]"/>
       </div>
     </div>

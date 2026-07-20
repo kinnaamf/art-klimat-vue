@@ -1,4 +1,4 @@
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
 export const useSliderDrag = () => {
   const sliderRef = ref<HTMLElement | null>(null)
