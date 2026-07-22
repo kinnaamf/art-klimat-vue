@@ -34,7 +34,8 @@
   }
 
   .header__menu-item {
-    @apply !text-white/70 text-nowrap cursor-pointer;
+    @apply !text-white/70 text-nowrap cursor-pointer transition-all duration-200
+    hover:!text-white/90;
   }
 
   .header__search {
@@ -153,7 +154,7 @@
   }
 
   .footer-column__link {
-    @apply !text-white/60;
+    @apply !text-white/60 hover:!text-white/90 transition-all duration-300;
   }
 
   /* APP FORM STYLES */
@@ -275,7 +276,7 @@
   /* HERO SECTION STYLES */
   .hero {
     @apply relative w-full h-dvh bg-cover bg-center bg-no-repeat text-white;
-    background-image: url("/images/Hero.png");
+    background-image: url("/images/Hero.webp");
   }
 
   .hero-content {
@@ -305,7 +306,7 @@
 
   .features__list {
     @apply flex gap-4 mt-12 cursor-grab overflow-x-auto overflow-y-hidden scrollbar-none select-none active:cursor-grabbing pr-6
-    xl:pr-16
+    xl:pr-0
   }
 
   .feature-card {
@@ -391,7 +392,7 @@
 
   .img-production {
     @apply absolute inset-0 w-full h-full bg-no-repeat;
-    background-image: url('/images/production.png');
+    background-image: url('/images/production.webp');
     background-size: 95%;
     background-position: right 35%;
   }
@@ -555,9 +556,7 @@
   .products__list {
     @apply flex gap-4 mt-12 cursor-grab overflow-x-auto scrollbar-none pr-6 select-none active:cursor-grabbing
     xl:pr-0
-    2xl:overflow-x-hidden
-    2xl:cursor-pointer
-    2xl:active:cursor-pointer;
+    2xl:grid 2xl:grid-cols-5 2xl:overflow-visible 2xl:cursor-default 2xl:active:cursor-default;
   }
 
   .product-card {

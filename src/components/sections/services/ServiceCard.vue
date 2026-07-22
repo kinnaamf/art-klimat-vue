@@ -12,7 +12,7 @@ defineProps<{
     </h3>
 
     <template v-if="card.type === 'planning'">
-      <img src="/images/planning.png" alt="" class="img-planning"/>
+      <img src="/images/planning.webp" alt="" class="img-planning"/>
     </template>
 
     <template v-else-if="card.type === 'production'">
@@ -22,7 +22,7 @@ defineProps<{
     </template>
 
     <template v-else-if="card.type === 'commissioning'" >
-      <img src="/images/commissioning.png" alt="" class="img-commissioning" />
+      <img src="/images/commissioning.webp" alt="" class="img-commissioning" />
     </template>
   </div>
 </template>

@@ -61,9 +61,9 @@ export const useSlider = () => {
   // PRODUCTION SECTION
 
   const slides = [
-    { main: '/images/production-slider/slide-1.png', alt: 'Вентиляционная система в производственном помещении' },
-    { main: '/images/production-slider/slide-2.png', alt: 'Монтаж климатического оборудования' },
-    { main: '/images/production-slider/slide-3.png', alt: 'Промышленная вентиляция' },
+    { main: '/images/production-slider/slide-1.webp', alt: 'Вентиляционная система в производственном помещении' },
+    { main: '/images/production-slider/slide-2.webp', alt: 'Монтаж климатического оборудования' },
+    { main: '/images/production-slider/slide-3.webp', alt: 'Промышленная вентиляция' },
   ]
 
   const current = ref(1)
