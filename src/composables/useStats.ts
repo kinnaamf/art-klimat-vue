@@ -15,7 +15,7 @@ export const useStats = () => {
     },
     {
       title: '43',
-      description: 'Сотрудников вштате'
+      description: 'Сотрудников в штате'
     },
     {
       title: '321',
